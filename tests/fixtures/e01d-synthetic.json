@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "experiment": "E01d",
+  "registration_status": "prospective_context_control",
+  "registered_date": "2026-08-29",
+  "feature_blinding": "Only archive metadata and source TSV annotations were inspected when this protocol was registered; no selected WAV samples or derived audio features were inspected.",
+  "source": {
+    "record": "zenodo:6091940",
+    "doi": "10.5281/zenodo.6091940",
+    "license_spdx": "CC-BY-4.0",
+    "archive": {
+      "filename": "RookID.zip",
+      "bytes": 22091554631,
+      "checksum": "md5:aec294923cee2b2b7ae20a09825b8f45"
+    },
+    "identity_evidence": "individually leg-ringed captive rooks; one observer annotated the emitter",
+    "recording_context": "all focal birds housed together in one outdoor aviary",
+    "recordings": [
+      {
+        "split": "enrollment",
+        "stem": "20200214_090050",
+        "calls_per_identity": 3,
+        "tsv_bytes": 44579,
+        "tsv_crc32": "e89cbf50",
+        "wav_bytes": 608726592,
+        "wav_compressed_bytes": 541395130,
+        "wav_crc32": "1ad07a73"
+      },
+      {
+        "split": "query",
+        "stem": "20200302_091000",
+        "calls_per_identity": 6,
+        "tsv_bytes": 109957,
+        "tsv_crc32": "778390b6",
+        "wav_bytes": 2534365920,
+        "wav_compressed_bytes": 2247208515,
+        "wav_crc32": "4c0c8c39"
+      }
+    ],
+    "max_range_fetched_uncompressed_bytes": 3150000000
+  },
+  "sample": {
+    "identities": [
+      "fixture-a",
+      "fixture-b",
+      "fixture-c",
+      "fixture-d",
+      "fixture-e"
+    ],
+    "required_event": "apb",
+    "selection_seed": 23,
+    "maximum_signal_seconds": 3.0,
+    "annotation_margin_seconds": 0.05,
+    "minimum_same_recording_separation_seconds": 10.0,
+    "clip_seconds": 3.0,
+    "channel_index": 0,
+    "channel_policy": "one fixed channel for both source recordings; no multichannel features",
+    "padding": "labelled call plus margin, centred in zero-valued padding",
+    "overlap_policy": "reject a candidate when any differently labelled, Inc, or Pls annotation overlaps its extracted signal interval",
+    "explicit_ambiguity_substrings": [
+      "in_pls",
+      "in_inc",
+      "unclear"
+    ]
+  },
+  "representations": {
+    "primary": {
+      "name": "birdnet_v2_4",
+      "package": "birdnet==1.1.0",
+      "model": "BirdNET v2.4 LiteRT fp32",
+      "segment_pooling": "per-clip arithmetic mean then L2"
+    },
+    "secondary": {
+      "name": "log_mel_summary",
+      "status": "sensitivity control only"
+    },
+    "nuisance": [
+      {
+        "name": "duration_only",
+        "features": "annotated signal duration including the fixed margin"
+      },
+      {
+        "name": "level_only",
+        "features": "signal-window log RMS dBFS, peak dBFS, and crest factor; zero padding excluded"
+      }
+    ]
+  },
+  "head": {
+    "name": "dual_ridge",
+    "ridge_lambda": 1.0,
+    "feature_processing": "representation-specific enrollment-only normalization followed by enrollment-mean centering",
+    "hyperparameter_tuning": "none"
+  },
+  "inference": {
+    "seed": 43,
+    "permutations": 999,
+    "bootstrap_replicates": 5000,
+    "bootstrap_unit": "query identity",
+    "confidence_level": 0.95,
+    "chance_accuracy": 0.2,
+    "alpha": 0.05
+  },
+  "gate": {
+    "context_match": "one exact Event value, one source recording per split, and every identity represented in both recordings",
+    "identity_signal": "primary accuracy permutation p <= 0.05 and identity-block bootstrap lower bound > 0.2",
+    "nuisance_screen": "duration-only and level-only permutation p > 0.05",
+    "incremental_signal": "paired identity-block bootstrap lower bound for primary minus each nuisance accuracy > 0",
+    "pass": "the primary representation satisfies context_match, identity_signal, nuisance_screen, and incremental_signal",
+    "stop": "If the primary representation fails, do not use this sample for SSL, mixture, OT, or later model comparisons. A pass retains the unresolved within-category micro-position limitation and counts as one species-level G1 benchmark, not evidence for Djuma identity or abundance."
+  },
+  "claim_limit": "This is a captive, closed-set, exact-event sensitivity benchmark. Shared recordings and simple duration/level controls defeat known coarse shortcuts but cannot eliminate stable within-category micro-position or aviary acoustics, and the result does not establish open-set Djuma re-identification.",
+  "publication_note": "Synthetic identity labels for software tests only; not the experiment registration."
+}

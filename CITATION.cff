@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying author manuscript when using this research code."
+title: "Acoustic re-identification research"
+type: software
+authors:
+  - family-names: Wallington
+    given-names: Graham
+  - family-names: Lighten
+    given-names: Jackie
+repository-code: "https://github.com/OpenXeroth/acoustic-re-id-research"
+url: "https://open.xeroth.ai/acoustic-re-id-research/"
+license: Apache-2.0
+version: "0.1.0"
+date-released: "2026-10-02"
+preferred-citation:
+  type: manuscript
+  title: "Recording context and data splitting can inflate acoustic re-identification accuracy across species and studies"
+  authors:
+    - family-names: Wallington
+      given-names: Graham
+    - family-names: Lighten
+      given-names: Jackie
+  year: 2026
+  url: "https://open.xeroth.ai/papers/acoustic-re-id-v7.pdf"

@@ -1,0 +1,107 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xinyenyana"
+version = "0.1.0"
+description = "Research pipeline for open-set acoustic re-identification of individual birds"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+authors = [{ name = "OpenXeroth" }]
+dependencies = [
+  "botocore>=1.36,<2",
+  "httpx>=0.27,<1",
+  "pydantic>=2.8,<3",
+  "typer>=0.12,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.11,<3",
+  "numpy>=1.26,<3",
+  "pytest>=8.3,<10",
+  "h5py>=3.10,<4",
+  "ruff>=0.6",
+  "scipy>=1.11,<2",
+]
+evaluation = [
+  "h5py>=3.10,<4",
+  "numpy>=1.26,<3",
+  "openpyxl>=3.1,<4",
+  "remotezip==0.12.6",
+  "requests>=2.32,<3",
+  "scipy>=1.11,<2",
+]
+birdnet-evaluation = [
+  "birdnet==1.1.0",
+]
+ml = [
+  "librosa>=0.10,<1",
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<4",
+  "pyarrow>=17,<26",
+  "scikit-learn>=1.5,<2",
+  "torch>=2.4",
+  "torchaudio>=2.4",
+]
+
+[project.scripts]
+xinyenyana = "xinyenyana.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/xinyenyana"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-config --strict-markers"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# Table notes and fixed tables are prose; splitting them mid-sentence would not help a reader.
+"scripts/paper_v6_text_tables.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = [
+  "ai_edge_litert",
+  "ai_edge_litert.*",
+  "avex",
+  "avex.*",
+  "bacpipe",
+  "bacpipe.*",
+  "birdnet",
+  "birdnet.*",
+  "espnet2",
+  "espnet2.*",
+  "h5py",
+  "h5py.*",
+  "numpy",
+  "numpy.*",
+  "openpyxl",
+  "openpyxl.*",
+  "remotezip",
+  "requests",
+  "requests.*",
+  "scipy",
+  "scipy.*",
+  "soundfile",
+  "speechbrain",
+  "speechbrain.*",
+  "torch",
+  "torch.*",
+  "transformers",
+  "transformers.*",
+]
+ignore_missing_imports = true
+
