@@ -13,7 +13,7 @@ license: Apache-2.0
 version: "0.1.0"
 date-released: "2026-10-02"
 preferred-citation:
-  type: manuscript
+  type: unpublished
   title: "Recording context and data splitting can inflate acoustic re-identification accuracy across species and studies"
   authors:
     - family-names: Wallington
