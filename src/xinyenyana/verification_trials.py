@@ -45,27 +45,16 @@ TRIAL_TYPES = (
 def _equal_error_rate(positive: Any, negative: Any) -> dict[str, float] | None:
     """Where the false-accept and false-reject rates cross."""
 
-    import numpy as np
+    from xinyenyana.verification import equal_error_point
 
     if not len(positive) or not len(negative):
         return None
-    # One sort rather than a sweep over every distinct score. Sweeping is
-    # quadratic, and the rook produces of the order of a million pairs, which
-    # is the difference between a second and a day.
-    scores = np.concatenate([positive, negative])
-    is_positive = np.concatenate(
-        [np.ones(len(positive), dtype=bool), np.zeros(len(negative), dtype=bool)]
-    )
-    order = np.argsort(-scores, kind="stable")
-    scores, is_positive = scores[order], is_positive[order]
-    accepted_positive = np.cumsum(is_positive)
-    accepted_negative = np.cumsum(~is_positive)
-    false_accept = accepted_negative / len(negative)
-    false_reject = (len(positive) - accepted_positive) / len(positive)
-    crossing = int(np.argmin(np.abs(false_accept - false_reject)))
+    error, threshold = equal_error_point(positive, negative)
     return {
-        "equal_error_rate": round(float((false_accept[crossing] + false_reject[crossing]) / 2), 4),
-        "threshold": round(float(scores[crossing]), 6),
+        "equal_error_rate": round(error, 4),
+        # Do not round a threshold across an observed score or collapse the
+        # reject-all endpoint back onto the maximum score.
+        "threshold": threshold,
     }
 
 

@@ -2,12 +2,10 @@
   "source_commit": "e8e1c93f719f47855fd363c6e17a3c8975b12e77",
   "export_date": "2026-10-02",
   "unchanged_files": {
-    "pyproject.toml": "d9993f703401367a56838044478d1b62e9b75918bbf90f3c921f470652660474",
     "scripts/build_e02_rookid.py": "6eae88427a8e8daa9911047b6b3658733595935a017ddb330c2fd020e64566f6",
     "scripts/check_docs.py": "64d5d169c0a28862d23ef73af9b2eddeb8bc0d05c9b0510076fe8e821836d767",
     "scripts/check_multiview_gate.py": "5b3253695fc4dd27f860e8a4e24862c8ffafbe01bd291ef0200fff09d6669b34",
     "scripts/check_v6_replay.py": "1612f99211fc92c6ddf984384072f4461a869699cf19ab7852f13124d5759326",
-    "scripts/donor_direction.py": "fde9286b2fd68e6e9a82afac72d89fcb14815e312b43a35e7cfe3e7c4ae97775",
     "scripts/fetch_benchmarks.py": "94060744620ba95861c3a154e4911e5a7b61cb98986351ffbdde548c6af41591",
     "scripts/frozen_probe_summary.py": "ab990c5f66bf54b068f5c99ba3a579d2006a2a943d30defb2f27acaacf675b17",
     "scripts/learned_combination_summary.py": "f6780d172204c5d78a8308994bdd0bee797eac6b9fa02171c907914478b95af7",
@@ -16,8 +14,6 @@
     "scripts/paper_v6_additional.py": "72f62fcecdbcaa2af583e8bf526096bb07909979fc5489e7387fa456f0f66589",
     "scripts/paper_v6_build.sh": "67f2a61d371d20b9442781e802adae16ad73e00a18c73e05eae9f53ad64c5cc7",
     "scripts/paper_v6_candidate_coverage.py": "ec44f3dbbd31b92b8caf08a38c0da61b4d4268d904417e7ee3ff161bae3a1fc9",
-    "scripts/paper_v6_controls.py": "e111690dc8ddea69863d55b7dcd05e4a1fbc7774324762235f1b63e09a181867",
-    "scripts/paper_v6_evidence.py": "0e1cca7e57206b5622d1b7916e2b192cfca8c1e16ec9c36168266af9b553f19f",
     "scripts/paper_v6_headline.py": "3e35703e147ded8e79ae06ebfc541c5be24461ebd289e528274558db8319f058",
     "scripts/paper_v6_headline_agreement.py": "1b54af17bcb169e4dbb380aea4c67e08805621acf68f31f228f894a75b156878",
     "scripts/paper_v6_information.py": "1f5fcb2b694feefd0c253af0bafaca9928d66b47558defff6bf60dc644ff5fce",
@@ -25,13 +21,10 @@
     "scripts/paper_v6_main_controls.py": "d6538d375dad559cf6e6432275158c83d17a6e4c72919dd8ffcb5974390b8d6f",
     "scripts/paper_v6_model_provenance.py": "b7643a21ab6e09dbf39dece8010a7452689d3eb7045c49372465f571986e9bd2",
     "scripts/paper_v6_open_roles.py": "270d6a3511c6732c036f7da8379a4155744102e7467be20f3042092bd3d8cb1c",
-    "scripts/paper_v6_open_set.py": "8d12120edda2e2636bea1c6b2fbcf5471cab69afab73c4932811b0a90017318d",
     "scripts/paper_v6_overview.py": "f33294afa306d3f97957bc1d66e53b1010d755a9eb35d80a852b6e2fb2dc17c7",
     "scripts/paper_v6_paired.py": "a7cbb0482ffaca503d99e6b30204824fc782a06330055b4e360a8f764f1a1739",
     "scripts/paper_v6_reproduction.py": "9f5069b4024aa7a94cad8fa74e5ff198212d4f8bd6189c275657f1680bb8f0ae",
     "scripts/paper_v6_spectral.py": "6e6c41e152c0488c25813c50940a35e62358ccd1393284291c0bcfa0aa1d2fa5",
-    "scripts/paper_v6_text_tables.py": "3178000add9683fa5a751a1e63fb7049fc888c8c71f91e1bf3410775d25ef3ea",
-    "scripts/paper_v7_review.py": "889470fbdb3f62acc84b8a891383e27dbdf6dfb2e3a02cccd96aab0f0e1c9a7b",
     "scripts/run_v6_onnx_threads.py": "016f08c4f78eb142a02d6ab538990c38d7d48d7a9def7042a20c387af536f079",
     "scripts/sequence_metric_summary.py": "0a808e0a09a68f13f20981a70276cd0d4f11daead93a05c4ddb76ab7a4d641df",
     "scripts/v6_workflow.py": "109dd7f15050556907d10d112dbf9b47669e26f13789aea14ca0314934da8537",
@@ -40,7 +33,6 @@
     "src/xinyenyana/a3.py": "fda5cd31a4104896a562e43566a4895088631f2ef3133f86da9c556a9903a654",
     "src/xinyenyana/a5.py": "5d71866293498ee30f95f0f8816f53493db0de81defe139154ce1284c0d1d420",
     "src/xinyenyana/a6.py": "818c6384f8f90ee375c13b6afd07c5eae30e162698dcef182c9d5e89d7832585",
-    "src/xinyenyana/archive.py": "7cc76e80c6670bb7e5765bf36afa25fe7c3d5c1fbfd7064ef06932e8f5893047",
     "src/xinyenyana/background_challenge.py": "87a1ed35260d05e507b6be137130bbbad6cb21e089a91a77b082079e9d236081",
     "src/xinyenyana/background_probe.py": "0db3c62055a1afd9b7aa02abae84724bd16c2c5251643e2ac7c0b24d6bca6b4b",
     "src/xinyenyana/bats.py": "d974d91a729e429e042e2c3f26d3897941ad0b3261f0a023af63b489c763d694",
@@ -48,7 +40,6 @@
     "src/xinyenyana/birdnet_reader.py": "df9d139ab5f3d18b605a4a0192ff0bd76e9f2d95ee6b2834eca381c033c931ef",
     "src/xinyenyana/birdpark.py": "5477f7e86a03c8613777f8e9ae9ea31cfdaee0043f1242777a16a493ff7ed87d",
     "src/xinyenyana/cleaning.py": "cb73d4d51ed145f5f8225fb40b0da53ee21129b2a0bae986fe2b1ab9c1964ab8",
-    "src/xinyenyana/cli.py": "c85af39d499487d09193d5dfb5a153f6837ab1f03190565e146950f10c2e6901",
     "src/xinyenyana/cli_v6.py": "c98a0ca9484c021bc6c62cb7b50cac14480f9bcdc31c0c7ddbaae61c5e5bf2e4",
     "src/xinyenyana/compensation.py": "d4c0e6e991eead791664bcda8fff7491c9024ab8900dfcd6d6a7ccbc411569a6",
     "src/xinyenyana/confound_index.py": "805554e15f84d5ef1823f376a6dde552740f08bf10c48c36f11698d85b281350",
@@ -57,7 +48,6 @@
     "src/xinyenyana/e02.py": "72c36ea89d9051c9dc5bf6386f7ee27f1175b78863aee36f14d21f33c3e37134",
     "src/xinyenyana/encoder_comparison.py": "9df106b10e820d81271457dc33ca94fa4c1f35a965a1a3c7f02d0d4692cdea56",
     "src/xinyenyana/endpoints.py": "8c468c8577c8fcb949f3bca4c14d8ee296ae9453200ae17b16e9a18bc3b4f19a",
-    "src/xinyenyana/evaluation.py": "bf7e313d97851e6d266db36c6cbc0bfe8292ba624bcebba36e92ac1cbf48076d",
     "src/xinyenyana/extraction_cache.py": "ac4af0c8b34913352fa605e33a706148268c3d222c1200bdff28c273bd3e458c",
     "src/xinyenyana/features.py": "aaace913d1e35b4f923214f924f185bdde5d34fa99373aa47243e7d134017d1b",
     "src/xinyenyana/frozen_probe.py": "3f87f3bcdcdc70dee5e2431e1690fcef5074ff05dfb742bfc5aa2154e434cf50",
@@ -79,17 +69,14 @@
     "src/xinyenyana/right_whale.py": "39ed27eabdfa85b486733affdd790295b140cc24d1341a72a22bdf26d3acf693",
     "src/xinyenyana/rookid.py": "4a20148c364b33bf3154cef022a7222ee5ea80d9d73848aa9599956cc48915b5",
     "src/xinyenyana/rookid_channels.py": "a75ecee5a1dc885e9cc1970ab6ad0a62b5f79dcf2e351a23ddff87e1774aff97",
-    "src/xinyenyana/score_normalisation.py": "9731ee222f8f90f08d8b5cd689ef25f02254d9542d2e8b086e65f688b0325a13",
     "src/xinyenyana/sensitivity_floor.py": "bcbba548f76d375d9aa4aecca279f082255eff970168980dbf5e8b7b787f113c",
     "src/xinyenyana/sequence_metric.py": "9246b8fb0a2ca535ac6d5a6b857a6ba7a158b7e4f109d6991e8eac0ec99fa379",
     "src/xinyenyana/song_removed.py": "26ac9c1fe2ec0ed80ac0f1358a0dee11f7650e71f8bfb143dbdde5f25394d840",
     "src/xinyenyana/spectral_subtraction.py": "d26f9f3fa423f6a6c1c4140b2601c0dd9fce6a07d4ceca42c9646ca1ac0df8c1",
     "src/xinyenyana/split_difference.py": "03494363986e3d64c647b40972212292004ef891591c0b396d484686d3298c9b",
     "src/xinyenyana/stowell_augmentation.py": "917d67bd0ff8563494d658149efe98b94b87ef1d5d107bf94077fc4f68015bd4",
-    "src/xinyenyana/v6_analyses.py": "5970cbf621e1acba7b83b4416f44d781b076e7ed242b7ea4789559c52548e1bf",
     "src/xinyenyana/v6_controls.py": "4f7c52b8dada8ec91e3c8fc9121c17e1d274ecc4a7ed496e8b334ea73d251784",
     "src/xinyenyana/validity.py": "c9755651d14f6059a5cc081dc529051585bd57b4552f0e8dffb9ad01387ba8ed",
-    "src/xinyenyana/verification_trials.py": "efc58e1c44f0086fe54b12344cb5305a7c1c234c303919c6245abd222a9748aa",
     "src/xinyenyana/xeus.py": "3d4da62bec19d5fbb44379944a1bcb7b8bdc51df2f4853d461bb069809effb3b",
     "tests/test_a2.py": "01f7711724e0af22a513b22ee51da1f863800e8711c7f97a6162d8c3181e65b1",
     "tests/test_a3.py": "d964da4fa6be9e5c0c0dabbfe28e08e275fc24892dd689333f60a6fd5d8226c6",
@@ -144,16 +131,85 @@
     "tests/test_split_difference.py": "383601cdbac907b5bb76e08e52efbf346326db246623353aee82a1975d9fe93a",
     "tests/test_stowell.py": "7cc166f8ec35e83b0eeef4cb0bf0c3600be9a8c0778a792478d291b62582f910",
     "tests/test_stowell_augmentation.py": "d09ad0a6488f950636d0eb43148bdea74d7570b3f1ca2ed604fe426e105d7d19",
-    "tests/test_v6.py": "6057562490c9e0aae22ed02734e8184ad491a303cea83c45d310e4a5f459b3d9",
     "tests/test_v6_workflow.py": "2d75d3e5aa07edd0d679a3664a5150eb2220ded13c8c30a18ad323a15720905c",
     "tests/test_validity.py": "a37c826558bd0fa2c91f85458f8deac900adede31dae3b960676a02058a21a14",
     "tests/test_verification_trials.py": "bc080fec9f64b9a05975a4a664e0e38d0e3917339d9f6e9bc3286c1e706b5248",
-    "tests/test_within_session_permutation.py": "429fd2d7b3cae636b1bee8b3d74aadc0c136c530b11930ba3d931183eaf83e24",
-    "uv.lock": "2fc6ed704e83e1923868a16d60727c23d285776fba659e7e53bf1c6dd248267f"
+    "tests/test_within_session_permutation.py": "429fd2d7b3cae636b1bee8b3d74aadc0c136c530b11930ba3d931183eaf83e24"
   },
   "changes": [
     "Public documentation and packaging",
     "Protocol identity lists omitted; synthetic E01d test fixture",
     "No media, private correspondence, model weights or per-animal result records exported"
-  ]
+  ],
+  "correction_version": "0.2.0",
+  "correction_date": "2026-10-04",
+  "modified_files": {
+    "pyproject.toml": {
+      "export_sha256": "d9993f703401367a56838044478d1b62e9b75918bbf90f3c921f470652660474",
+      "corrected_sha256": "46a3707873b25eb6689f67be77d8f4a5854ef3430103d432864dbe36590be034"
+    },
+    "scripts/donor_direction.py": {
+      "export_sha256": "fde9286b2fd68e6e9a82afac72d89fcb14815e312b43a35e7cfe3e7c4ae97775",
+      "corrected_sha256": "0c6929bea0dc8713fb39d1350330081aba3bdc812f4dd038191e48510acdce0e"
+    },
+    "scripts/paper_v6_controls.py": {
+      "export_sha256": "e111690dc8ddea69863d55b7dcd05e4a1fbc7774324762235f1b63e09a181867",
+      "corrected_sha256": "0eb47538a3d9b7c8ec41eff98dec5d501f1575e55bfe15660ac93a0a050c7794"
+    },
+    "scripts/paper_v6_evidence.py": {
+      "export_sha256": "0e1cca7e57206b5622d1b7916e2b192cfca8c1e16ec9c36168266af9b553f19f",
+      "corrected_sha256": "18efd61956fa424c51a0f71e6478d3235492897ebc84eb6beb9a84d1c065d7f2"
+    },
+    "scripts/paper_v6_open_set.py": {
+      "export_sha256": "8d12120edda2e2636bea1c6b2fbcf5471cab69afab73c4932811b0a90017318d",
+      "corrected_sha256": "22b063fce0f6bbdfea627bb98f34151ee351130b68dde7980119dd09e1700200"
+    },
+    "scripts/paper_v6_text_tables.py": {
+      "export_sha256": "3178000add9683fa5a751a1e63fb7049fc888c8c71f91e1bf3410775d25ef3ea",
+      "corrected_sha256": "c06d5332dbb2a48c3ea40e11d120959dd830b81fd6558e3af3aa78ca7a10e9ed"
+    },
+    "scripts/paper_v7_review.py": {
+      "export_sha256": "889470fbdb3f62acc84b8a891383e27dbdf6dfb2e3a02cccd96aab0f0e1c9a7b",
+      "corrected_sha256": "e265da6d84bfc585a8522c054b45ede9744e0b337eba7ecf7f74d2445b365be8"
+    },
+    "src/xinyenyana/archive.py": {
+      "export_sha256": "7cc76e80c6670bb7e5765bf36afa25fe7c3d5c1fbfd7064ef06932e8f5893047",
+      "corrected_sha256": "d17a5426547db627ce5a58d1ea6b7bdb8c0c8e5d3bfdd95e408ad460ebf86ce2"
+    },
+    "src/xinyenyana/cli.py": {
+      "export_sha256": "c85af39d499487d09193d5dfb5a153f6837ab1f03190565e146950f10c2e6901",
+      "corrected_sha256": "fa3d6facf993d3de8a045f6e8f47aa69604cc12f3885adb83174f7a2b828050c"
+    },
+    "src/xinyenyana/evaluation.py": {
+      "export_sha256": "bf7e313d97851e6d266db36c6cbc0bfe8292ba624bcebba36e92ac1cbf48076d",
+      "corrected_sha256": "7b0a64785f040b3282c593dc01e62e131d71f553d82fbe993cc47628867916df"
+    },
+    "src/xinyenyana/score_normalisation.py": {
+      "export_sha256": "9731ee222f8f90f08d8b5cd689ef25f02254d9542d2e8b086e65f688b0325a13",
+      "corrected_sha256": "bfac98f696d7309e5b8a3a2b237816b0e3be62c185df31614ea2d2e6fdf30672"
+    },
+    "src/xinyenyana/v6_analyses.py": {
+      "export_sha256": "5970cbf621e1acba7b83b4416f44d781b076e7ed242b7ea4789559c52548e1bf",
+      "corrected_sha256": "c0bb2e060f07a80f75898b57c83626e6a84150d6636d865ff672e10638b42d0f"
+    },
+    "src/xinyenyana/verification_trials.py": {
+      "export_sha256": "efc58e1c44f0086fe54b12344cb5305a7c1c234c303919c6245abd222a9748aa",
+      "corrected_sha256": "de0ec15e35770ecfb26813331feeb4a1847e2597b365a125a51ebb8b30e7529a"
+    },
+    "tests/test_v6.py": {
+      "export_sha256": "6057562490c9e0aae22ed02734e8184ad491a303cea83c45d310e4a5f459b3d9",
+      "corrected_sha256": "ef9d9e3e542327e42cbe71565ae224ba2aef26caf9d6c94ce797c9b25a730294"
+    },
+    "uv.lock": {
+      "export_sha256": "2fc6ed704e83e1923868a16d60727c23d285776fba659e7e53bf1c6dd248267f",
+      "corrected_sha256": "c79cdf62eb585f852382600bc212c7cd72e94cc2f6fcfaa854369a113c882647"
+    }
+  },
+  "added_code_files": {
+    "src/xinyenyana/verification.py": "b2df0da1b9d0a6c67b2c280af3cc86842de3b70f28febcd95116e5b3dff1b773",
+    "src/xinyenyana/cosine_controls.py": "d67017088d416a6ee71fe8d33463230685649878016c7922254d1963ea295b84",
+    "tests/test_verification.py": "b94effa74ba788891076afb0a5b4665c5ab2e997a48b12313b6f7be86d39617a",
+    "tests/test_local_archive.py": "72eeb55f1a9532b0ff658c342b26c64d9e9f007846c76de92bd8084f28e71991"
+  },
+  "correction_note": "The original export digests remain historical provenance. Corrected files are not represented as unchanged. Software verification does not establish the numerical impact on archived manuscript results."
 }

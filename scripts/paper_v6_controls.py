@@ -10,6 +10,8 @@ from typing import Any
 
 from paper_v6_evidence import ALL_MODELS, BACKGROUND_ENDPOINTS, required_count, validate
 
+from xinyenyana.cosine_controls import EXCLUDED_CONTROLS, is_control
+
 PAIRINGS = {
     "foreground_gallery_foreground_query": "C → C",
     "background_gallery_background_query": "B → B",
@@ -135,9 +137,11 @@ def render(results: Path, evidence: Path, out: Path) -> None:
         analysis = load(name)
         validate(analysis, "analyses", ep, ())
         norms[ep] = {
-            model: clean_as_norm(row["as_norm"]) for model, row in analysis["models"].items()
+            model: clean_as_norm(row["as_norm"])
+            for model, row in analysis["models"].items()
+            if not is_control(model)
         }
-        if set(norms[ep]) != ALL_MODELS:
+        if set(norms[ep]) != ALL_MODELS - EXCLUDED_CONTROLS:
             raise ValueError(f"{ep}: incomplete AS-norm coverage")
         numbers.put(f"{ep}.as_norm", norms[ep], name)
         controls[ep], sources[ep] = selected, provenance

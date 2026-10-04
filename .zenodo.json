@@ -1,0 +1,30 @@
+{
+  "title": "Acoustic re-identification research",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Wallington, Graham",
+      "affiliation": "Xeroth AI Limited"
+    },
+    {
+      "name": "Lighten, Jackie",
+      "affiliation": "Xeroth AI Limited"
+    }
+  ],
+  "description": "Research software for recording-context diagnostics in acoustic animal re-identification. Version 0.2.0 corrects tied-score verification, excludes invalid magnitude controls from cosine-only analyses, and supports local result archiving. The accompanying v8 author manuscript is a corrected draft awaiting archived-result verification and author declarations. The complete numerical evidence bundle is not included. Apache-2.0 applies to the original software; author publications and third-party resources retain their separate terms.",
+  "license": "Apache-2.0",
+  "version": "0.2.0",
+  "keywords": [
+    "bioacoustics",
+    "animal re-identification",
+    "recording context",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://open.xeroth.ai/acoustic-re-id-research/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}

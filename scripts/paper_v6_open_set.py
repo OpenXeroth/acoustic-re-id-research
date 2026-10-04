@@ -12,6 +12,7 @@ import numpy as np
 from paper_v6_controls import complete_gate
 from paper_v6_evidence import OPEN_ENDPOINTS, validate
 
+from xinyenyana.cosine_controls import is_control
 from xinyenyana.open_set import STRANGER_BUDGETS, summarise_allocations
 
 
@@ -132,7 +133,11 @@ def render(results: Path, evidence: Path, out: Path) -> None:
         if numbers.sources[name] != report["sources"][name]:
             raise ValueError(f"{name}: bytes differ from the complete evidence inventory")
         validate(data, "open-set", ep, ())
-        models = {model: public_metrics(row) for model, row in data["representations"].items()}
+        models = {
+            model: public_metrics(row)
+            for model, row in data["representations"].items()
+            if not is_control(model)
+        }
         short = {model.split("/")[-1]: model for model in models}
         choices = {"reference": "birdnet-v2.4", "best average rank": short[leader]}
         # Chance for naming a known individual correctly: one over the test-known birds.
@@ -146,8 +151,9 @@ def render(results: Path, evidence: Path, out: Path) -> None:
     out.mkdir(parents=True, exist_ok=True)
     introduction = (
         "All entries are medians across sixteen allocations, with minimum–maximum ranges. "
-        "Ranges show allocation sensitivity, not confidence intervals. All 39 embeddings and "
-        "controls were measured; BirdNET and the network with the best average rank over the "
+        "Ranges show allocation sensitivity, not confidence intervals. The raw duration and level "
+        "controls are excluded because cosine normalisation removes their magnitude. "
+        "BirdNET and the network with the best average rank over the "
         "thirteen closed-set datasets are shown here, the same network on every dataset. "
         "The expanded great-tit endpoint is supplementary and "
         "nest-attributed.\n\n"

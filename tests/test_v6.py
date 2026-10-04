@@ -726,9 +726,11 @@ def test_stored_open_set_retains_allocation_provenance_and_observations(tmp_path
     result = open_set_from_store(
         endpoint,
         [{"chosen": {"m": {"representation": "one-hot"}}, "stored_vectors": {"m": stored}}],
-        models=["m"],
+        models=["m", "clip-duration-only", "clip-level-only"],
         sources=[source],
     )
+    assert set(result["representations"]) == {"m"}
+    assert set(result["excluded_representations"]) == {"clip-duration-only", "clip-level-only"}
     allocations = result["representations"]["m"]["allocations"]
     assert result["allocation_seed"] == ALLOCATION_SEED
     assert result["allocations"] == len(allocations) == ALLOCATIONS

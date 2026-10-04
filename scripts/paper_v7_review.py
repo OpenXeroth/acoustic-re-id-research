@@ -43,6 +43,7 @@ REFERENCE = "birdnet-v2.4"
 REPLICATES = 10000
 PRIMARY = [e for e in ENDPOINTS if e != "great-tit-full"]
 ENTRIES = [REFERENCE] + [m for m in DISPLAY if m != DUPLICATE]
+COSINE_ENTRIES = [m for m in ENTRIES if not m.startswith("clip-")]
 DONOR_ARMS = (("other_-10db", "-10db"), ("other_0db", "0db"), ("other_10db", "10db"))
 DONOR_FILES = {
     "chiffchaff-withinyear": "background-chiffchaff-withinyear.json",
@@ -341,7 +342,7 @@ def entry_counts(build: Path, results: Path) -> dict[str, Any]:
                 "negative_interval": sum(c[1] < 0 for c in ci.values()),
             }
         norms = {short(k): v for k, v in controls[f"{ep}.as_norm"].items()}
-        norms = {m: v for m, v in norms.items() if m in ENTRIES}
+        norms = {m: v for m, v in norms.items() if m in COSINE_ENTRIES}
         as_norm = {
             "calls_lower": sum(
                 v["calls_scored"]["as_norm"]["accuracy"]
@@ -403,7 +404,7 @@ def calibrated_against_test_derived(results: Path, sources: dict[str, str]) -> d
             raise ValueError(f"{name}: bytes differ from the evidence report")
         data = json.loads(raw)
         for name, row in data["representations"].items():
-            if short(name) not in ENTRIES:
+            if short(name) not in COSINE_ENTRIES:
                 continue
             for allocation in row["allocations"]:
                 test = allocation["calibrated_on_other_birds"]["0.10"]["test"]
@@ -431,13 +432,14 @@ def open_set(build: Path, v5: Path, results: Path, sources: dict[str, str]) -> d
             "test_known": {"minimum": min(known), "maximum": max(known)},
             "leader": short(entry["models_by_rule"]["best average rank"]),
             "achieved": {
-                m: models[m]["achieved_stranger_acceptance_calibrated_at_0.10"] for m in ENTRIES
+                m: models[m]["achieved_stranger_acceptance_calibrated_at_0.10"]
+                for m in COSINE_ENTRIES
             },
             "maximum_accepted_and_named": max(
-                models[m]["acceptance_calibrated_at_0.10"]["median"] for m in ENTRIES
+                models[m]["acceptance_calibrated_at_0.10"]["median"] for m in COSINE_ENTRIES
             ),
             "best": max(
-                ENTRIES, key=lambda m: models[m]["acceptance_calibrated_at_0.10"]["median"]
+                COSINE_ENTRIES, key=lambda m: models[m]["acceptance_calibrated_at_0.10"]["median"]
             ),
         }
     data = json.loads((v5 / "v5-open-set-great-tit.json").read_text())

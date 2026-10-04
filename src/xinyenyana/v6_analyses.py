@@ -211,7 +211,12 @@ def analyse_endpoint(
         if int(vectors.shape[1]) > 3:
             row["beecher_hs"] = beecher_hs(vectors[foreground], identities)
         if with_backgrounds:
-            row["as_norm"] = as_norm_block(endpoint, vectors)
+            from xinyenyana.cosine_controls import EXCLUSION_REASON, is_control
+
+            if is_control(model):
+                row["as_norm_excluded"] = EXCLUSION_REASON
+            else:
+                row["as_norm"] = as_norm_block(endpoint, vectors)
         other = held_out.get(model)
         if other is not None:
             chosen, candidates = other
@@ -384,6 +389,11 @@ def open_set_from_store(
         "representations": {},
     }
     for model in models:
+        from xinyenyana.cosine_controls import EXCLUSION_REASON, is_control
+
+        if is_control(model):
+            summary.setdefault("excluded_representations", {})[model] = EXCLUSION_REASON
+            continue
         choices = {
             name: entry for result in results for name, entry in result.get("chosen", {}).items()
         }
@@ -392,6 +402,10 @@ def open_set_from_store(
         if stored[model]["representation"] != choices[model]["representation"]:
             raise ValueError(f"{model}: open-set vectors do not match the reported choice")
         vectors, _, representation = load_vectors(_check_digest(stored[model]), endpoint)
+        if np.asarray(vectors).ndim != 2 or np.asarray(vectors).shape[1] <= 3:
+            raise ValueError(
+                f"{model}: raw low-dimensional controls cannot use cosine open-set scoring"
+            )
         chosen = np.asarray(vectors)[rows]
         evaluated = [
             evaluate_allocation(

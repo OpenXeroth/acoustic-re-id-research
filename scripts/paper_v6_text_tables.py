@@ -18,6 +18,8 @@ from paper_v6_controls import PAIRINGS, complete_gate
 from paper_v6_evidence import BACKGROUND_ENDPOINTS, ENDPOINTS
 from paper_v6_overview import DISPLAY
 
+from xinyenyana.cosine_controls import is_control
+
 NAMES = {
     "birdpark-juv01": "Zebra finch, group of four",
     "birdpark-juv03": "Zebra finch, group of eight",
@@ -573,7 +575,7 @@ def main_tables(b: Build) -> str:
         "other strangers to accept one in ten, as would be done in practice; the last column "
         "gives the proportion of test strangers it actually accepted. Perch 2.0 had the best "
         "average rank in the closed-set comparison. The great tit rows without audio and with "
-        "the song removed come from the same allocations. All 38 embeddings and controls are "
+        "the song removed come from the same allocations. All 36 neural networks are "
         "in Table S15."
     )
     return "\n\n".join(out) + "\n"
@@ -935,7 +937,7 @@ def supporting_tables(b: Build) -> dict[str, str]:
     rows = []
     for ep in BACKGROUND_ORDER:
         norms = controls[f"{ep}.as_norm"]
-        for model in ["birdnet-v2.4"] + MODELS:
+        for model in [m for m in ["birdnet-v2.4"] + MODELS if not is_control(m)]:
             n = norms[full_name(norms, None, model)]
             rows.append(
                 [NAMES[ep], DISPLAY.get(model, "BirdNET v2.4")]
@@ -946,9 +948,9 @@ def supporting_tables(b: Build) -> dict[str, str]:
             )
     s["S10"] = (
         "**Table S10.** Adaptive score normalisation with the class-mean classifier: "
-        "re-ID accuracy before and after, for all 38 embeddings and controls.\n\n"
+        "re-ID accuracy before and after, for all 36 neural networks.\n\n"
         + table(["Dataset", "Embedding", "Calls tested", "Backgrounds tested"], rows)
-        + "\n\n*Notes:* Backgrounds tested: classifier fitted on backgrounds and tested "
+        + "\n\n*Notes:* Duration and level controls are excluded because cosine normalisation removes their magnitude. Backgrounds tested: classifier fitted on backgrounds and tested "
         "on backgrounds. Intervals are in the numerical ledger."
     )
 
@@ -1301,7 +1303,7 @@ def more_supporting(
         "cockatoo-fold1",
     ):
         models = opened[ep]["models"]
-        for model in ["birdnet-v2.4"] + MODELS:
+        for model in [m for m in ["birdnet-v2.4"] + MODELS if not is_control(m)]:
             key = [k for k in models if short(k) == model][0]
             m = models[key]["allocation_sensitivity"]
             rows.append(
@@ -1318,8 +1320,7 @@ def more_supporting(
                 ]
             )
     s["S15"] = (
-        "**Table S15.** Re-ID with strangers present for all 38 embeddings and "
-        "controls: medians over 16 allocations, with ranges.\n\n"
+        "**Table S15.** Re-ID with strangers present for all 36 neural networks: medians over 16 allocations, with ranges.\n\n"
         + table(
             [
                 "Dataset",
@@ -1334,10 +1335,10 @@ def more_supporting(
             ],
             rows,
         )
-        + "\n\n*Notes:* Calibrated: threshold set on other strangers to admit one in ten; "
+        + "\n\n*Notes:* Duration and level controls are excluded because cosine normalisation removes their magnitude. Calibrated: threshold set on other strangers to admit one in ten; "
         "strangers accepted: the proportion of test strangers it actually admitted. "
         "Balanced accuracy on known individuals: mean over individuals of the proportion of "
-        "their calls accepted and correctly named; on strangers: proportion rejected. "
+        "their calls accepted and correctly named; on strangers: mean over individuals of the proportion of their clips rejected. "
         "Geometric mean of the two, as in the AnimalCLEF 2025 benchmark (Adam et al. 2025)."
     )
 

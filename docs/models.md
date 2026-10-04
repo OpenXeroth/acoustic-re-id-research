@@ -10,6 +10,7 @@ The paper compares 36 neural networks plus duration-only and level-only controls
 
 ## Speech models
 
+- [espnet/xeus](https://huggingface.co/espnet/xeus): the original adapter expects a separately downloaded checkpoint; recover its recorded weight digest before exact reproduction.
 - [facebook/wav2vec2-base](https://huggingface.co/facebook/wav2vec2-base)
 - [facebook/wav2vec2-large-robust](https://huggingface.co/facebook/wav2vec2-large-robust)
 - [facebook/wav2vec2-conformer-rope-large](https://huggingface.co/facebook/wav2vec2-conformer-rope-large)

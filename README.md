@@ -2,11 +2,13 @@
 
 **Can a computer recognise an individual animal by its voice—or is it recognising the recording?**
 
-Research code accompanying *Recording context and data splitting can inflate acoustic re-identification accuracy across species and studies*, by Graham Wallington and Jackie Lighten (2026, author manuscript v7).
+Research code accompanying *Recording context and data splitting can inflate acoustic re-identification accuracy across species and studies*, by Graham Wallington and Jackie Lighten (2026, author manuscript v8, corrected draft).
 
-[Research website](https://open.xeroth.ai/acoustic-re-id-research/) · [Full paper (PDF)](https://open.xeroth.ai/papers/acoustic-re-id-v7.pdf) · [Supporting information](docs/supporting-information.md) · [Datasets](docs/datasets.md) · [Models](docs/models.md)
+[Research website](https://open.xeroth.ai/acoustic-re-id-research/) · [Full paper (PDF)](https://open.xeroth.ai/papers/acoustic-re-id-v8-draft.pdf) · [Supporting information](docs/supporting-information.md) · [Datasets](docs/datasets.md) · [Models](docs/models.md)
 
 We compare 36 pretrained neural networks and two simple controls across 13 datasets covering nine species. Background sound, recording sessions and data splitting can make individual recognition look more reliable than it is. The code tests these shortcuts and evaluates the harder task of recognising familiar animals while rejecting strangers. Djuma recordings are not part of this benchmark.
+
+**Publication checks remain open:** historical paired-clip error rates need verification with corrected tie handling, and author declarations need confirmation. See [corrections and outstanding work](docs/publication-status.md).
 
 ## Start here
 
