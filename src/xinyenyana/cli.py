@@ -102,15 +102,25 @@ _PROVENANCE: dict[str, Any] = {}
 
 
 @app.callback()
-def _snapshot_provenance() -> None:
+def _snapshot_provenance(
+    local_archive: Annotated[
+        Path | None,
+        typer.Option(
+            help="Independent-compute mode: archive results locally; no XenWarden/GCS access."
+        ),
+    ] = None,
+) -> None:
     """Record the revision and source digest before any command does work."""
 
+    _PROVENANCE.clear()
+    if local_archive is not None:
+        _PROVENANCE["local_archive"] = str(local_archive.expanduser().resolve())
     _PROVENANCE["code_revision"] = _code_revision()
     _PROVENANCE["source_sha256"] = source_digest(_source_root())
 
 
 def _emit(payload: Any, output: Path | None, *, require_archive: bool = False) -> None:
-    """Write the result, and put a copy where one disk failure cannot lose it.
+    """Write the result and retain an archive copy with explicit storage provenance.
 
     A build summary is archived on the same terms as a measurement, because it
     records what a sample is made of and every later figure is read against it.
@@ -124,13 +134,15 @@ def _emit(payload: Any, output: Path | None, *, require_archive: bool = False) -
     measurement code, which survives any merge strategy. Both are taken when the
     command starts, not here.
 
-    Archiving happens only when ``XINYENYANA_RESULT_ARCHIVE`` names a
-    destination, so tests and local runs never reach the network, and it is set
-    on the machine where results are actually produced so that it cannot be
-    forgotten there.
+    Managed runs archive to ``XINYENYANA_RESULT_ARCHIVE``. The explicit
+    independent-compute mode writes to a local content-addressed archive instead;
+    that copy is not an off-machine backup and never reaches the network.
     """
 
-    if require_archive and (output is None or not os.environ.get(ARCHIVE_VARIABLE)):
+    local_archive = _PROVENANCE.get("local_archive")
+    if require_archive and (
+        output is None or not (local_archive or os.environ.get(ARCHIVE_VARIABLE))
+    ):
         raise typer.BadParameter("this measurement requires an output and a result archive")
     if isinstance(payload, dict):
         payload = {
@@ -138,12 +150,19 @@ def _emit(payload: Any, output: Path | None, *, require_archive: bool = False) -
             "code_revision": _PROVENANCE.get("code_revision", _code_revision()),
             "source_sha256": _PROVENANCE.get("source_sha256", source_digest(_source_root())),
         }
+        if local_archive:
+            payload["execution_mode"] = "independent compute; local content-addressed archive"
     text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
     if output is not None:
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(text)
         prefix = os.environ.get(ARCHIVE_VARIABLE)
-        if prefix:
+        if local_archive:
+            from xinyenyana.archive import archive_result_locally
+
+            receipt = archive_result_locally(output, Path(local_archive))
+            typer.echo(json.dumps(receipt, sort_keys=True))
+        elif prefix:
             receipt = archive_result(output, prefix=prefix)
             typer.echo(json.dumps(receipt, sort_keys=True))
             if require_archive and not receipt["archived"]:
@@ -449,10 +468,7 @@ def audit_physical_constraints(
 
     from xinyenyana.frozen_probe import runtime_record
 
-    if not os.environ.get("XENWARDEN_LEASE") or not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(
-            "this audit requires an admitted lease and configured result archive"
-        )
+    _require_lease_and_archive()
     loaded = attach_song_times(_load_endpoint(endpoint, sample_root), song_metadata)
     events = endpoint_events(loaded)
     _emit(
@@ -636,10 +652,7 @@ def run_learned_combination_command(
     )
     from xinyenyana.learned_combination import run_learned_combination
 
-    if not os.environ.get("XENWARDEN_LEASE"):
-        raise typer.BadParameter("run this measurement through an admitted XenWarden lease")
-    if not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(f"{ARCHIVE_VARIABLE} must be configured before extraction")
+    _require_lease_and_archive()
     loaded = _load_endpoint(endpoint, sample_root)
     data = endpoint_audio_provenance(loaded)
     vectors, extraction = extract_endpoint(loaded, cache_root=cache_root, threads=threads)
@@ -685,10 +698,7 @@ def run_sequence_metric_command(
     from xinyenyana.frozen_probe import endpoint_audio_provenance, runtime_record
     from xinyenyana.sequence_metric import SEQUENCE_LAYERS, run_sequence_metric
 
-    if not os.environ.get("XENWARDEN_LEASE"):
-        raise typer.BadParameter("run this measurement through an admitted XenWarden lease")
-    if not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(f"{ARCHIVE_VARIABLE} must be configured before extraction")
+    _require_lease_and_archive()
     loaded = _load_endpoint(endpoint, sample_root)
     sessions: list[str] | None = None
     if session_key is not None:
@@ -866,10 +876,7 @@ def run_background_challenge_command(
 
     from xinyenyana.background_probe import run_background_challenge
 
-    if not os.environ.get("XENWARDEN_LEASE"):
-        raise typer.BadParameter("run this measurement through an admitted XenWarden lease")
-    if not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(f"{ARCHIVE_VARIABLE} must be configured before extraction")
+    _require_lease_and_archive()
     result = run_background_challenge(
         _load_endpoint(endpoint, sample_root), cache_root=cache_root, threads=threads
     )
@@ -888,10 +895,7 @@ def audit_multiview_gate_command(
 
     from xinyenyana.multiview_gate import run_multiview_gate
 
-    if not os.environ.get("XENWARDEN_LEASE") or not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(
-            "this gate requires an admitted lease and configured result archive"
-        )
+    _require_lease_and_archive()
     _emit(run_multiview_gate(archive, cache_root), output, require_archive=True)
 
 
@@ -913,10 +917,7 @@ def run_frozen_probe_command(
 
     from xinyenyana.frozen_probe import run_frozen_probe
 
-    if not os.environ.get("XENWARDEN_LEASE"):
-        raise typer.BadParameter("run this measurement through an admitted XenWarden lease")
-    if not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(f"{ARCHIVE_VARIABLE} must be configured before extraction")
+    _require_lease_and_archive()
     result = run_frozen_probe(
         _load_endpoint(endpoint, sample_root),
         cache_root=cache_root,
@@ -952,10 +953,7 @@ def run_song_removed_command(
     from xinyenyana.frozen_probe import endpoint_audio_provenance, extract_endpoint, runtime_record
     from xinyenyana.song_removed import compare_arms, masked_endpoint
 
-    if not os.environ.get("XENWARDEN_LEASE"):
-        raise typer.BadParameter("run this measurement through an admitted XenWarden lease")
-    if not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(f"{ARCHIVE_VARIABLE} must be configured before extraction")
+    _require_lease_and_archive()
     loaded = _load_endpoint(endpoint, sample_root)
     masked = masked_endpoint(loaded, scratch=scratch_root)
     untouched_vectors, untouched_extraction = extract_endpoint(
@@ -1010,10 +1008,7 @@ def run_nuisance_command(
     from xinyenyana.frozen_probe import endpoint_audio_provenance, extract_endpoint, runtime_record
     from xinyenyana.nuisance import run_nuisance
 
-    if not os.environ.get("XENWARDEN_LEASE"):
-        raise typer.BadParameter("run this measurement through an admitted XenWarden lease")
-    if not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(f"{ARCHIVE_VARIABLE} must be configured before extraction")
+    _require_lease_and_archive()
     loaded = _load_endpoint(endpoint, sample_root)
     data = endpoint_audio_provenance(loaded)
     vectors, extraction = extract_endpoint(loaded, cache_root=cache_root, threads=threads)
@@ -1062,10 +1057,7 @@ def run_stowell_augmentation_command(
     from xinyenyana.stowell_augmentation import AUGMENTED, UNTOUCHED, augmented_endpoint
     from xinyenyana.validity import run_validity_gate
 
-    if not os.environ.get("XENWARDEN_LEASE"):
-        raise typer.BadParameter("run this measurement through an admitted XenWarden lease")
-    if not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(f"{ARCHIVE_VARIABLE} must be configured before extraction")
+    _require_lease_and_archive()
     loaded = _load_endpoint(endpoint, sample_root)
     data = endpoint_audio_provenance(loaded)
     plain, plain_extraction = extract_endpoint(loaded, cache_root=cache_root, threads=threads)
@@ -1129,10 +1121,7 @@ def run_geometry_command(
     from xinyenyana.geometry import run_geometry
     from xinyenyana.nuisance import _session_granularity, _session_value
 
-    if not os.environ.get("XENWARDEN_LEASE"):
-        raise typer.BadParameter("run this measurement through an admitted XenWarden lease")
-    if not os.environ.get(ARCHIVE_VARIABLE):
-        raise typer.BadParameter(f"{ARCHIVE_VARIABLE} must be configured before extraction")
+    _require_lease_and_archive()
     loaded = _load_endpoint(endpoint, sample_root)
     missing = [r.filename for r in loaded.records if session_key not in r.context]
     if missing:
@@ -1208,6 +1197,8 @@ def run_a5(
 
 
 def _require_lease_and_archive() -> None:
+    if _PROVENANCE.get("local_archive"):
+        return
     if not os.environ.get("XENWARDEN_LEASE"):
         raise typer.BadParameter("run this measurement through an admitted XenWarden lease")
     if not os.environ.get(ARCHIVE_VARIABLE):

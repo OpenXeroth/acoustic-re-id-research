@@ -6,8 +6,8 @@ donor pairings that `run-background-challenge` already retains in its result.
 
 For each query the other-donor arm answered wrongly, it asks whether the answer
 was the donor's identity. The comparison shuffles the donor identities across the
-wrong-answered queries, holding the pool of donors fixed and forbidding a query
-its own identity.
+wrong-answered queries, redrawing collisions to keep each query's own identity
+excluded. The resulting donor pool need not preserve the original multiplicities.
 
     python scripts/donor_direction.py background-chiffchaff-withinyear.json ...
 """

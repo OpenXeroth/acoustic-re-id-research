@@ -97,6 +97,28 @@ def archive_object_name(path: Path, *, prefix: str) -> str:
     return f"{prefix.rstrip('/')}/{sha256_file(path)}.json"
 
 
+def archive_result_locally(path: Path, directory: Path) -> dict[str, Any]:
+    """Create and verify an immutable local copy for independently managed runs.
+
+    This is a local copy, not an off-machine backup. Existing content is never
+    overwritten; a corrupt object fails verification and requires investigation.
+    """
+    import shutil
+
+    directory = directory.expanduser().resolve()
+    directory.mkdir(parents=True, exist_ok=True)
+    digest = sha256_file(path)
+    target = directory / f"{digest}.json"
+    try:
+        with target.open("xb") as out, path.open("rb") as source:
+            shutil.copyfileobj(source, out)
+    except FileExistsError:
+        pass
+    if sha256_file(target) != digest:
+        raise ValueError("local archive object does not match the result; it was not overwritten")
+    return {"archived": True, "backend": "local", "object": str(target), "sha256": digest}
+
+
 def _token_copy_and_describe(
     path: Path, target: str, token_file: Path, *, transport: httpx.BaseTransport | None
 ) -> tuple[Any, str]:

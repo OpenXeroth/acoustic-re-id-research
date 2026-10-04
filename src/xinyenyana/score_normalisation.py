@@ -61,6 +61,10 @@ def class_mean_scores(
 
     import numpy as np
 
+    if np.asarray(enrolment).ndim == 2 and np.asarray(enrolment).shape[1] <= 3:
+        raise ValueError(
+            "cosine score normalisation is not defined for the raw duration/level controls"
+        )
     train = _unit(enrolment)
     centre = train.mean(axis=0, keepdims=True)
     train = _unit(train - centre)

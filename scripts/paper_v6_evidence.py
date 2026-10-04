@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Any
 
 from xinyenyana.a5 import MODELS as SPEECH_MODELS
+from xinyenyana.cosine_controls import EXCLUDED_CONTROLS, EXCLUSION_REASON
 
 ENDPOINTS = (
     "birdpark-juv01",
@@ -96,6 +97,7 @@ BIO_GROUPS = {
     "onnx": ("perch-v2", "birdnet-v3-preview"),
     "avex": ("esp-aves2-sl-beats-all", "esp-aves2-effnetb0-all"),
 }
+
 ALL_MODELS = {
     *SPEECH_MODELS,
     "espnet/xeus",
@@ -230,10 +232,12 @@ def validate(
     elif role == "analyses":
         if set(data.get("models", {})) != ALL_MODELS:
             raise ValueError("stored-vector analyses do not cover all 39 model/control entries")
-        for row in data["models"].values():
+        for model, row in data["models"].items():
             if row.get("permutation_nulls", {}).get("permutations") != 9999:
                 raise ValueError("reported representation lacks its 9,999-shuffle null")
-            if endpoint in BACKGROUND_ENDPOINTS:
+            if endpoint in BACKGROUND_ENDPOINTS and not (
+                model in EXCLUDED_CONTROLS and row.get("as_norm_excluded") == EXCLUSION_REASON
+            ):
                 for condition in ("calls_scored", "backgrounds_scored"):
                     block = row.get("as_norm", {}).get(condition, {})
                     predictions = block.get("predictions", {})
@@ -267,8 +271,16 @@ def validate(
         from xinyenyana.archive import canonical_sha256
         from xinyenyana.open_set import ALLOCATION_SEED, ALLOCATIONS, ROLES
 
-        if set(data.get("representations", {})) != ALL_MODELS:
-            raise ValueError("open set does not cover all 39 entries")
+        excluded = data.get("excluded_representations", {})
+        if excluded and (
+            set(excluded) != EXCLUDED_CONTROLS
+            or any(reason != EXCLUSION_REASON for reason in excluded.values())
+        ):
+            raise ValueError("open-set exclusions must identify only the two invalid raw controls")
+        if set(data.get("representations", {})) != ALL_MODELS - set(excluded):
+            raise ValueError(
+                "open set does not cover the required neural networks and declared scope"
+            )
         if data.get("allocation_seed") != ALLOCATION_SEED or data.get("allocations") != ALLOCATIONS:
             raise ValueError("open-set allocation provenance is missing")
         for block in data["representations"].values():

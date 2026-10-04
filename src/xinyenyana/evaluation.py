@@ -41,6 +41,8 @@ def classification_metrics(actual: Any, predicted: Any) -> dict[str, float]:
 def verification_metrics(scores: Any, actual: Any) -> dict[str, float]:
     import numpy as np
 
+    from xinyenyana.verification import equal_error_point, operating_points
+
     targets = (np.arange(scores.shape[1])[None, :] == actual[:, None]).reshape(-1)
     values = scores.reshape(-1)
     order = np.argsort(values, kind="mergesort")
@@ -56,16 +58,13 @@ def verification_metrics(scores: Any, actual: Any) -> dict[str, float]:
     positives = int(positive.sum())
     negatives = len(targets) - positives
     auc = (float(ranks[positive].sum()) - positives * (positives + 1) / 2) / (positives * negatives)
-    descending = np.argsort(-values, kind="mergesort")
-    ordered = positive[descending]
-    tpr = np.cumsum(ordered) / positives
-    fpr = np.cumsum(~ordered) / negatives
-    fnr = 1 - tpr
-    equal = int(np.argmin(np.abs(fpr - fnr)))
+    _, fpr, fnr = operating_points(values[positive], values[~positive])
+    tpr = 1 - fnr
+    error, _ = equal_error_point(values[positive], values[~positive])
     permitted = tpr[fpr <= 0.01]
     return {
         "roc_auc": auc,
-        "eer": float((fpr[equal] + fnr[equal]) / 2),
+        "eer": error,
         "tar_at_far_0_01": float(permitted.max()) if len(permitted) else 0.0,
     }
 
