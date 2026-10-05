@@ -211,5 +211,6 @@
     "tests/test_verification.py": "b94effa74ba788891076afb0a5b4665c5ab2e997a48b12313b6f7be86d39617a",
     "tests/test_local_archive.py": "72eeb55f1a9532b0ff658c342b26c64d9e9f007846c76de92bd8084f28e71991"
   },
-  "correction_note": "The original export digests remain historical provenance. Corrected files are not represented as unchanged. Software verification does not establish the numerical impact on archived manuscript results."
+  "correction_note": "The original export digests remain historical provenance. Corrected files are not represented as unchanged. Software verification does not establish the numerical impact on archived manuscript results.",
+  "version": "0.2.1"
 }

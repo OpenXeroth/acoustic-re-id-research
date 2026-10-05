@@ -8,4 +8,4 @@ Reported analyses use 9,999 label shuffles and 10,000 individual bootstrap draws
 
 For cosine score normalisation and the main open-set sweep, exclude the raw duration and loudness controls: normalising to unit length discards their magnitude. Their per-dimension-standardised kernel-ridge comparisons remain valid. For paired verification, tied scores must cross a threshold together. See [publication status](publication-status.md) for the pending numerical impact check.
 
-Every independent run must retain its configuration, input and split hashes, source-code digest, environment and weight versions, seeds, predictions and metrics. See [reproduction](reproduction.md) for local archiving and the unavailable original evidence bundle.
+Every independent run must retain its configuration, input and split hashes, source-code digest, environment and weight versions, seeds, predictions and metrics. See [reproduction](reproduction.md) for local archiving and the public aggregate evidence deposit and its limits.

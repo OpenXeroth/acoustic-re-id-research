@@ -11,9 +11,9 @@
       "affiliation": "Xeroth AI Limited"
     }
   ],
-  "description": "Research software for recording-context diagnostics in acoustic animal re-identification. Version 0.2.0 corrects tied-score verification, excludes invalid magnitude controls from cosine-only analyses, and supports local result archiving. The accompanying v8 author manuscript is a corrected draft awaiting archived-result verification and author declarations. The complete numerical evidence bundle is not included. Apache-2.0 applies to the original software; author publications and third-party resources retain their separate terms.",
+  "description": "Research software for recording-context diagnostics in acoustic animal re-identification. Version 0.2.1 documents the completed cached-vector verification audit and links the independent v8 evidence deposit. It includes the tied-score correction and independent local archiving introduced in 0.2.0. All reported paired-clip EERs and headline classifications are reproduced without new model inference. Apache-2.0 applies to software; manuscript and evidence documentation are CC BY-NC 4.0; third-party terms remain separate.",
   "license": "Apache-2.0",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "keywords": [
     "bioacoustics",
     "animal re-identification",
@@ -25,6 +25,17 @@
       "identifier": "https://open.xeroth.ai/acoustic-re-id-research/",
       "relation": "isDocumentedBy",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.23159989",
+      "relation": "isSupplementedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/OpenXeroth/acoustic-re-id-research/tree/v0.2.1",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
     }
-  ]
+  ],
+  "publication_date": "2026-10-05"
 }

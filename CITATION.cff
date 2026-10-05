@@ -10,8 +10,9 @@ authors:
 repository-code: "https://github.com/OpenXeroth/acoustic-re-id-research"
 url: "https://open.xeroth.ai/acoustic-re-id-research/"
 license: Apache-2.0
-version: "0.2.0"
-date-released: "2026-10-04"
+version: "0.2.1"
+doi: "10.5281/zenodo.23159972"
+date-released: "2026-10-05"
 preferred-citation:
   type: unpublished
   title: "Recording context and data splitting can inflate acoustic re-identification accuracy across species and studies"
@@ -21,4 +22,4 @@ preferred-citation:
     - family-names: Lighten
       given-names: Jackie
   year: 2026
-  url: "https://open.xeroth.ai/papers/acoustic-re-id-v8-draft.pdf"
+  url: "https://open.xeroth.ai/papers/acoustic-re-id-v8.pdf"
