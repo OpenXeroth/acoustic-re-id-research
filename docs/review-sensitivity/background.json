@@ -1,0 +1,107 @@
+{
+  "chiffchaff-withinyear": {
+    "source_sha256": "b33a56075ba0b0f109765168665a46b8fb253145014243c9f4b8e8c122b1bf2a",
+    "values": {
+      "foreground": {
+        "accuracy": 0.7648099027409372,
+        "balanced_accuracy": 0.7905520239568022,
+        "query_majority_reference": 0.39345711759504864,
+        "training_majority_accuracy": 0.0618921308576481,
+        "query_clips": 1131,
+        "identities": 13
+      },
+      "background": {
+        "accuracy": 0.7372727272727273,
+        "balanced_accuracy": 0.7139828999517834,
+        "query_majority_reference": 0.39545454545454545,
+        "training_majority_accuracy": 0.06272727272727273,
+        "query_clips": 1100,
+        "identities": 13
+      }
+    }
+  },
+  "chiffchaff-acrossyear": {
+    "source_sha256": "16d7829255eaac4c75a99d646ed7610bd0c8c30d4f050e7364ad8d691a7b2f7b",
+    "values": {
+      "foreground": {
+        "accuracy": 0.16,
+        "balanced_accuracy": 0.15108865914786967,
+        "query_majority_reference": 0.16,
+        "training_majority_accuracy": 0.1,
+        "query_clips": 200,
+        "identities": 10
+      },
+      "background": {
+        "accuracy": 0.1319796954314721,
+        "balanced_accuracy": 0.14316914080071974,
+        "query_majority_reference": 0.15228426395939088,
+        "training_majority_accuracy": 0.09644670050761421,
+        "query_clips": 197,
+        "identities": 10
+      }
+    }
+  },
+  "littleowl-acrossyear": {
+    "source_sha256": "3d5e14c938c656ac9a8ca38957afed7a4c6a3de9c2c9662a9d6c529bce2242c1",
+    "values": {
+      "foreground": {
+        "accuracy": 0.5012285012285013,
+        "balanced_accuracy": 0.5182432296381457,
+        "query_majority_reference": 0.08353808353808354,
+        "training_majority_accuracy": 0.044226044226044224,
+        "query_clips": 407,
+        "identities": 16
+      },
+      "background": {
+        "accuracy": 0.10513447432762836,
+        "balanced_accuracy": 0.10792005373658599,
+        "query_majority_reference": 0.08557457212713937,
+        "training_majority_accuracy": 0.044009779951100246,
+        "query_clips": 409,
+        "identities": 16
+      }
+    }
+  },
+  "pipit-withinyear": {
+    "source_sha256": "1e7b02353f1036823ae9f503d3c518ed1e59f198484edcf7b10b36166065fc04",
+    "values": {
+      "foreground": {
+        "accuracy": 0.37623762376237624,
+        "balanced_accuracy": 0.36152863831132076,
+        "query_majority_reference": 0.1254125412541254,
+        "training_majority_accuracy": 0.11551155115511551,
+        "query_clips": 303,
+        "identities": 10
+      },
+      "background": {
+        "accuracy": 0.17747440273037543,
+        "balanced_accuracy": 0.17723102513648414,
+        "query_majority_reference": 0.12627986348122866,
+        "training_majority_accuracy": 0.11604095563139932,
+        "query_clips": 293,
+        "identities": 10
+      }
+    }
+  },
+  "pipit-acrossyear": {
+    "source_sha256": "5487d409487ab59051f9d39de44fd735c18390718e7885f9eee443f1c87507bc",
+    "values": {
+      "foreground": {
+        "accuracy": 0.21405750798722045,
+        "balanced_accuracy": 0.21821319994764524,
+        "query_majority_reference": 0.1597444089456869,
+        "training_majority_accuracy": 0.07348242811501597,
+        "query_clips": 313,
+        "identities": 10
+      },
+      "background": {
+        "accuracy": 0.06535947712418301,
+        "balanced_accuracy": 0.05587232567210321,
+        "query_majority_reference": 0.16013071895424835,
+        "training_majority_accuracy": 0.0718954248366013,
+        "query_clips": 306,
+        "identities": 10
+      }
+    }
+  }
+}

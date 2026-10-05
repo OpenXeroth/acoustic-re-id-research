@@ -1,0 +1,576 @@
+{
+  "calibration_size": {},
+  "code_revision": "7d52438adb1d552a5f6bde2ff105267b19b51c93",
+  "endpoint": "cockatoo-fold1",
+  "environment": {
+    "lease": "xw-872820c3",
+    "packages": {
+      "Jinja2": "3.1.6",
+      "Markdown": "3.10.3",
+      "MarkupSafe": "3.0.3",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "Werkzeug": "3.1.8",
+      "absl-py": "2.5.0",
+      "ai-edge-litert": "2.2.0",
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "astunparse": "1.6.3",
+      "audioread": "3.1.0",
+      "backports.strenum": "1.2.8",
+      "backports.zstd": "1.7.0",
+      "bacpipe": "1.3.5",
+      "birdnet": "1.1.0",
+      "bokeh": "3.9.2",
+      "botocore": "1.43.102",
+      "brotli": "1.2.0",
+      "certifi": "2026.7.22",
+      "cffi": "2.1.1",
+      "charset-normalizer": "3.5.1",
+      "cloudpickle": "3.1.2",
+      "contourpy": "1.4.0",
+      "cramjam": "2.12.1",
+      "cuda-bindings": "12.9.7",
+      "cuda-pathfinder": "1.6.0",
+      "cuda-toolkit": "12.8.1",
+      "cycler": "0.12.1",
+      "decorator": "5.3.1",
+      "einops": "0.8.2",
+      "etils": "1.14.0",
+      "fastparquet": "2026.5.0",
+      "filelock": "3.32.3",
+      "flatbuffers": "25.12.19",
+      "fonttools": "4.66.0",
+      "fsspec": "2026.7.0",
+      "gast": "0.7.0",
+      "google-pasta": "0.2.0",
+      "grpcio": "1.84.0",
+      "h11": "0.16.0",
+      "h5py": "3.16.0",
+      "hear21passt": "0.0.26",
+      "hf-xet": "1.6.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "huggingface_hub": "0.36.2",
+      "idna": "3.20",
+      "ijson": "3.5.1",
+      "importlib_resources": "7.1.0",
+      "inflate64": "1.0.4",
+      "jmespath": "1.1.0",
+      "joblib": "1.6.0",
+      "kagglehub": "0.3.13",
+      "keras": "3.11.3",
+      "kiwisolver": "1.5.1",
+      "lazy-loader": "0.6",
+      "libclang": "18.1.1",
+      "librosa": "1.0.0",
+      "linkify-it-py": "2.2.0",
+      "llvmlite": "0.49.0",
+      "markdown-it-py": "4.2.0",
+      "matplotlib": "3.11.2",
+      "mdit-py-plugins": "0.6.1",
+      "mdurl": "0.1.2",
+      "ml_collections": "1.1.0",
+      "ml_dtypes": "0.6.0",
+      "mpmath": "1.3.0",
+      "msgpack": "1.2.2",
+      "multivolumefile": "0.2.3",
+      "namex": "0.1.0",
+      "narwhals": "2.26.0",
+      "networkx": "3.6.1",
+      "nh3": "0.3.7",
+      "numba": "0.67.0",
+      "numpy": "2.5.3",
+      "nvidia-cublas-cu12": "12.8.4.1",
+      "nvidia-cuda-cupti-cu12": "12.8.90",
+      "nvidia-cuda-nvrtc-cu12": "12.8.93",
+      "nvidia-cuda-runtime-cu12": "12.8.90",
+      "nvidia-cudnn-cu12": "9.19.0.56",
+      "nvidia-cufft-cu12": "11.3.3.83",
+      "nvidia-cufile-cu12": "1.13.1.3",
+      "nvidia-curand-cu12": "10.3.9.90",
+      "nvidia-cusolver-cu12": "11.7.3.90",
+      "nvidia-cusparse-cu12": "12.5.8.93",
+      "nvidia-cusparselt-cu12": "0.7.1",
+      "nvidia-nccl-cu12": "2.28.9",
+      "nvidia-nvjitlink-cu12": "12.8.93",
+      "nvidia-nvshmem-cu12": "3.4.5",
+      "nvidia-nvtx-cu12": "12.8.90",
+      "onnxruntime": "1.30.0",
+      "opt_einsum": "3.4.0",
+      "optree": "0.20.0",
+      "ordered-set": "4.1.0",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "panel": "1.9.4",
+      "panel-material-ui": "0.15.0",
+      "param": "2.4.2",
+      "pillow": "12.3.0",
+      "pip": "26.2.1",
+      "platformdirs": "4.11.12",
+      "plotly": "7.1.0",
+      "pooch": "1.9.0",
+      "protobuf": "7.36.2",
+      "psutil": "7.2.2",
+      "py7zr": "1.1.3",
+      "pyarrow": "25.0.1",
+      "pybcj": "1.0.8",
+      "pycparser": "3.0",
+      "pycryptodomex": "3.23.0",
+      "pydantic": "2.13.5",
+      "pydantic_core": "2.46.5",
+      "pynndescent": "0.6.0",
+      "pyparsing": "3.3.3",
+      "pyppmd": "1.3.1",
+      "python-dateutil": "2.9.0.post0",
+      "pyviz_comms": "3.0.6",
+      "regex": "2026.9.10",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "safetensors": "0.8.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "seaborn": "0.13.2",
+      "setuptools": "81.0.0",
+      "shellingham": "1.5.4",
+      "six": "1.17.0",
+      "soundfile": "0.14.0",
+      "soxr": "1.1.0",
+      "sympy": "1.14.0",
+      "tensorboard": "2.20.0",
+      "tensorboard-data-server": "0.7.2",
+      "tensorflow": "2.20.0",
+      "tensorflow-hub": "0.16.0",
+      "termcolor": "3.3.0",
+      "texttable": "1.7.0",
+      "threadpoolctl": "3.7.0",
+      "timm": "1.0.11",
+      "tokenizers": "0.22.2",
+      "torch": "2.11.0+cu128",
+      "torchaudio": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "tornado": "6.5.10",
+      "tqdm": "4.70.1",
+      "transformers": "4.57.6",
+      "triton": "3.6.0",
+      "typer": "0.27.2",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "umap-learn": "0.5.12",
+      "urllib3": "2.8.0",
+      "wheel": "0.48.0",
+      "wrapt": "2.4.1",
+      "xyzservices": "2026.9.1"
+    },
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "experiment": "review-open-set-scorers",
+  "lock_sha256": "bcb02906d2a640c344ba8c3e215f496b9e7810d622ce9c7d87968f5d8cb204e2",
+  "manifest_sha256": "934340ac86aad82bc3a7afe4a0ed8b080523802209e10f53159cb2761d42b160",
+  "model": "speechbrain/spkrec-resnet-voxceleb",
+  "original_result_sha256": "69f4cf9d6e706fe90bf103ce03a71730e235afc44cd99b935f72234a87becab8",
+  "protocol_sha256": "22d2276709936df17b48ef208e5211dff7b3c69838afe4d3d9856242f927b0ec",
+  "representation": "spkrec-resnet-voxceleb-x3",
+  "role_digest": "e94fb7666845e30be64d6dd2f0841f080c6a2e49e9712e9316689d5d6f36f98e",
+  "runner_sha256": "3a790f7d95c31f0bad7d84cf2130a30e46fb970bcf544174df6f12e59c5674bc",
+  "scorers": {
+    "mean-profile": {
+      "acceptance_calibrated_at_0.01": {
+        "maximum": 0.33557046979865773,
+        "median": 0.039458357600465926,
+        "minimum": 0.0
+      },
+      "acceptance_calibrated_at_0.05": {
+        "maximum": 0.40268456375838924,
+        "median": 0.07937184446921514,
+        "minimum": 0.0
+      },
+      "acceptance_calibrated_at_0.10": {
+        "maximum": 0.42953020134228187,
+        "median": 0.14379568798001297,
+        "minimum": 0.0
+      },
+      "acceptance_calibrated_at_0.20": {
+        "maximum": 0.46308724832214765,
+        "median": 0.182844452669566,
+        "minimum": 0.0
+      },
+      "acceptance_calibrated_at_0.50": {
+        "maximum": 0.6702127659574468,
+        "median": 0.45148741418764304,
+        "minimum": 0.06
+      },
+      "allocations_exceeding_unknown_budget_at_0.01": 8,
+      "allocations_exceeding_unknown_budget_at_0.05": 7,
+      "allocations_exceeding_unknown_budget_at_0.10": 8,
+      "allocations_exceeding_unknown_budget_at_0.20": 8,
+      "allocations_exceeding_unknown_budget_at_0.50": 8,
+      "balanced_accuracy_known_calibrated_at_0.01": {
+        "maximum": 0.25734447004608296,
+        "median": 0.03889815844765789,
+        "minimum": 0.0
+      },
+      "balanced_accuracy_known_calibrated_at_0.05": {
+        "maximum": 0.29216851696690405,
+        "median": 0.07627108824619948,
+        "minimum": 0.0
+      },
+      "balanced_accuracy_known_calibrated_at_0.10": {
+        "maximum": 0.3333333333333333,
+        "median": 0.12397868322506811,
+        "minimum": 0.0
+      },
+      "balanced_accuracy_known_calibrated_at_0.20": {
+        "maximum": 0.4109307359307359,
+        "median": 0.1960640339915924,
+        "minimum": 0.0
+      },
+      "balanced_accuracy_known_calibrated_at_0.50": {
+        "maximum": 0.6131313131313131,
+        "median": 0.4622788685402115,
+        "minimum": 0.23483709273182957
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.01": {
+        "maximum": 1.0,
+        "median": 0.9956896551724138,
+        "minimum": 0.808681185722928
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.05": {
+        "maximum": 1.0,
+        "median": 0.9684488898198576,
+        "minimum": 0.7565033272837265
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.10": {
+        "maximum": 1.0,
+        "median": 0.9270789694176791,
+        "minimum": 0.7129461584996974
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.20": {
+        "maximum": 1.0,
+        "median": 0.8511767925561029,
+        "minimum": 0.6498192436040044
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.50": {
+        "maximum": 0.9210526315789473,
+        "median": 0.6660353735993336,
+        "minimum": 0.2274891774891775
+      },
+      "best_acceptance_at_0.01": {
+        "maximum": 0.19626168224299065,
+        "median": 0.07169536037350452,
+        "minimum": 0.0
+      },
+      "best_acceptance_at_0.05": {
+        "maximum": 0.3177570093457944,
+        "median": 0.10296714941716707,
+        "minimum": 0.02
+      },
+      "best_acceptance_at_0.10": {
+        "maximum": 0.4392523364485981,
+        "median": 0.16774361646690983,
+        "minimum": 0.02
+      },
+      "best_acceptance_at_0.20": {
+        "maximum": 0.5420560747663551,
+        "median": 0.23198862439435433,
+        "minimum": 0.045454545454545456
+      },
+      "best_acceptance_at_0.50": {
+        "maximum": 0.6542056074766355,
+        "median": 0.4670844744048873,
+        "minimum": 0.13636363636363635
+      },
+      "closed_set_accuracy": {
+        "maximum": 0.9696969696969697,
+        "median": 0.7733201581027668,
+        "minimum": 0.52
+      },
+      "equal_error_rate": {
+        "maximum": 0.5575757575757576,
+        "median": 0.4569450485718428,
+        "minimum": 0.2919186366135239
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.01": {
+        "maximum": 0.4561903453341652,
+        "median": 0.19568641342868337,
+        "minimum": 0.0
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.05": {
+        "maximum": 0.4701345075752415,
+        "median": 0.2698917952970281,
+        "minimum": 0.0
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.10": {
+        "maximum": 0.4978401626889969,
+        "median": 0.342695416806379,
+        "minimum": 0.0
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.20": {
+        "maximum": 0.5514958380528314,
+        "median": 0.4257172597378952,
+        "minimum": 0.0
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.50": {
+        "maximum": 0.6760454718906087,
+        "median": 0.49991139594629913,
+        "minimum": 0.24554670484319205
+      },
+      "known_vs_unknown_auroc": {
+        "maximum": 0.7842221000549753,
+        "median": 0.5843020388995421,
+        "minimum": 0.44458204334365325
+      },
+      "true_accept_at_false_accept_0.01": {
+        "maximum": 0.28971962616822433,
+        "median": 0.07535617567408454,
+        "minimum": 0.0
+      },
+      "true_accept_at_false_accept_0.05": {
+        "maximum": 0.4392523364485982,
+        "median": 0.1312904017674495,
+        "minimum": 0.02941176470588236
+      },
+      "true_accept_at_false_accept_0.10": {
+        "maximum": 0.5607476635514019,
+        "median": 0.21034337476300818,
+        "minimum": 0.05882352941176472
+      },
+      "true_accept_at_false_accept_0.20": {
+        "maximum": 0.6728971962616823,
+        "median": 0.2935642693863197,
+        "minimum": 0.08823529411764708
+      },
+      "true_accept_at_false_accept_0.50": {
+        "maximum": 0.808695652173913,
+        "median": 0.6038277511961723,
+        "minimum": 0.38235294117647056
+      },
+      "unknown_false_accept_rate_calibrated_at_0.01": {
+        "maximum": 0.22807017543859648,
+        "median": 0.007575757575757576,
+        "minimum": 0.0
+      },
+      "unknown_false_accept_rate_calibrated_at_0.05": {
+        "maximum": 0.3157894736842105,
+        "median": 0.03384338433843384,
+        "minimum": 0.0
+      },
+      "unknown_false_accept_rate_calibrated_at_0.10": {
+        "maximum": 0.38596491228070173,
+        "median": 0.10495714000930295,
+        "minimum": 0.0
+      },
+      "unknown_false_accept_rate_calibrated_at_0.20": {
+        "maximum": 0.4462809917355372,
+        "median": 0.1892079207920792,
+        "minimum": 0.0
+      },
+      "unknown_false_accept_rate_calibrated_at_0.50": {
+        "maximum": 0.7545454545454545,
+        "median": 0.47102803738317756,
+        "minimum": 0.17647058823529413
+      }
+    },
+    "nearest-clip": {
+      "acceptance_calibrated_at_0.01": {
+        "maximum": 0.3263157894736842,
+        "median": 0.07526196544888133,
+        "minimum": 0.0
+      },
+      "acceptance_calibrated_at_0.05": {
+        "maximum": 0.3263157894736842,
+        "median": 0.20166326232856724,
+        "minimum": 0.0
+      },
+      "acceptance_calibrated_at_0.10": {
+        "maximum": 0.49473684210526314,
+        "median": 0.2736476918719909,
+        "minimum": 0.029411764705882353
+      },
+      "acceptance_calibrated_at_0.20": {
+        "maximum": 0.6,
+        "median": 0.3596705308114704,
+        "minimum": 0.058823529411764705
+      },
+      "acceptance_calibrated_at_0.50": {
+        "maximum": 0.8,
+        "median": 0.6845593650274119,
+        "minimum": 0.17647058823529413
+      },
+      "allocations_exceeding_unknown_budget_at_0.01": 7,
+      "allocations_exceeding_unknown_budget_at_0.05": 7,
+      "allocations_exceeding_unknown_budget_at_0.10": 8,
+      "allocations_exceeding_unknown_budget_at_0.20": 8,
+      "allocations_exceeding_unknown_budget_at_0.50": 8,
+      "balanced_accuracy_known_calibrated_at_0.01": {
+        "maximum": 0.3007936507936508,
+        "median": 0.05747276916631755,
+        "minimum": 0.0
+      },
+      "balanced_accuracy_known_calibrated_at_0.05": {
+        "maximum": 0.3007936507936508,
+        "median": 0.105528208350789,
+        "minimum": 0.0
+      },
+      "balanced_accuracy_known_calibrated_at_0.10": {
+        "maximum": 0.513095238095238,
+        "median": 0.21459235209235208,
+        "minimum": 0.013157894736842105
+      },
+      "balanced_accuracy_known_calibrated_at_0.20": {
+        "maximum": 0.6472222222222223,
+        "median": 0.24778759693119945,
+        "minimum": 0.02631578947368421
+      },
+      "balanced_accuracy_known_calibrated_at_0.50": {
+        "maximum": 0.7039682539682539,
+        "median": 0.5255485441977378,
+        "minimum": 0.11578947368421053
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.01": {
+        "maximum": 1.0,
+        "median": 0.9956896551724138,
+        "minimum": 0.8670745272525028
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.05": {
+        "maximum": 1.0,
+        "median": 0.95,
+        "minimum": 0.8233870967741935
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.10": {
+        "maximum": 1.0,
+        "median": 0.9118454126518643,
+        "minimum": 0.7125278086763069
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.20": {
+        "maximum": 1.0,
+        "median": 0.8185557305134613,
+        "minimum": 0.6185692436040044
+      },
+      "balanced_accuracy_unknown_calibrated_at_0.50": {
+        "maximum": 0.8947368421052632,
+        "median": 0.5948423173922266,
+        "minimum": 0.2772727272727273
+      },
+      "best_acceptance_at_0.01": {
+        "maximum": 0.37383177570093457,
+        "median": 0.08004800213342815,
+        "minimum": 0.0
+      },
+      "best_acceptance_at_0.05": {
+        "maximum": 0.5327102803738317,
+        "median": 0.13429752066115702,
+        "minimum": 0.058823529411764705
+      },
+      "best_acceptance_at_0.10": {
+        "maximum": 0.6355140186915887,
+        "median": 0.203030303030303,
+        "minimum": 0.08823529411764706
+      },
+      "best_acceptance_at_0.20": {
+        "maximum": 0.7476635514018691,
+        "median": 0.3160504567203132,
+        "minimum": 0.17647058823529413
+      },
+      "best_acceptance_at_0.50": {
+        "maximum": 0.9217391304347826,
+        "median": 0.5979470198675496,
+        "minimum": 0.4117647058823529
+      },
+      "closed_set_accuracy": {
+        "maximum": 0.9848484848484849,
+        "median": 0.918648310387985,
+        "minimum": 0.8245614035087719
+      },
+      "equal_error_rate": {
+        "maximum": 0.558359133126935,
+        "median": 0.42780417172152,
+        "minimum": 0.2344694887300715
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.01": {
+        "maximum": 0.5106961058814323,
+        "median": 0.23921017326138955,
+        "minimum": 0.0
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.05": {
+        "maximum": 0.5106961058814323,
+        "median": 0.31699160768597257,
+        "minimum": 0.0
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.10": {
+        "maximum": 0.6046442140980495,
+        "median": 0.4354204961837099,
+        "minimum": 0.11180339887498948
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.20": {
+        "maximum": 0.6327335619703628,
+        "median": 0.45491446286846465,
+        "minimum": 0.15001392305196296
+      },
+      "geometric_mean_known_unknown_calibrated_at_0.50": {
+        "maximum": 0.6942385292907962,
+        "median": 0.549122791370037,
+        "minimum": 0.2803879041172631
+      },
+      "known_vs_unknown_auroc": {
+        "maximum": 0.8361737218251787,
+        "median": 0.6258619340194889,
+        "minimum": 0.4801857585139319
+      },
+      "true_accept_at_false_accept_0.01": {
+        "maximum": 0.3738317757009346,
+        "median": 0.08359474846055537,
+        "minimum": 0.0
+      },
+      "true_accept_at_false_accept_0.05": {
+        "maximum": 0.5327102803738317,
+        "median": 0.13429752066115702,
+        "minimum": 0.05882352941176472
+      },
+      "true_accept_at_false_accept_0.10": {
+        "maximum": 0.6355140186915889,
+        "median": 0.21015473887814312,
+        "minimum": 0.08823529411764708
+      },
+      "true_accept_at_false_accept_0.20": {
+        "maximum": 0.7570093457943925,
+        "median": 0.3366028708133971,
+        "minimum": 0.17647058823529416
+      },
+      "true_accept_at_false_accept_0.50": {
+        "maximum": 0.9217391304347826,
+        "median": 0.6494197292069632,
+        "minimum": 0.4117647058823529
+      },
+      "unknown_false_accept_rate_calibrated_at_0.01": {
+        "maximum": 0.2066115702479339,
+        "median": 0.004545454545454545,
+        "minimum": 0.0
+      },
+      "unknown_false_accept_rate_calibrated_at_0.05": {
+        "maximum": 0.2066115702479339,
+        "median": 0.03317880794701987,
+        "minimum": 0.0
+      },
+      "unknown_false_accept_rate_calibrated_at_0.10": {
+        "maximum": 0.35537190082644626,
+        "median": 0.09298013245033113,
+        "minimum": 0.0
+      },
+      "unknown_false_accept_rate_calibrated_at_0.20": {
+        "maximum": 0.45454545454545453,
+        "median": 0.1994214259051885,
+        "minimum": 0.0
+      },
+      "unknown_false_accept_rate_calibrated_at_0.50": {
+        "maximum": 0.7454545454545455,
+        "median": 0.5112915266890631,
+        "minimum": 0.23529411764705882
+      }
+    }
+  },
+  "source_sha256": "81cc80854993f781366f957d20d75c59ae8f3400621b5ea5c2bf7b541ca6045e",
+  "source_sha256_original": "624a16352932bbc4e70951834867b7a5bfb13b072b82fff3a349ce4e8e20e654",
+  "vectors_sha256": "ee38c3cedf386a48d5758a3c78dec46c8a549dab6c6e915e470a34e243d00c3e"
+}

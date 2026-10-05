@@ -299,6 +299,7 @@ def score_against_gallery(
     unknown: Sequence[str],
     partition: str,
     balanced: bool = True,
+    scorer: str = "mean-profile",
 ) -> list[dict[str, Any]]:
     """Score every query clip of these birds against a gallery of the known ones.
 
@@ -310,7 +311,10 @@ def score_against_gallery(
 
     import numpy as np
 
+    if scorer not in {"mean-profile", "nearest-clip"}:
+        raise ValueError(f"unknown gallery scorer: {scorer}")
     prototypes = []
+    gallery_identities = []
     for identity in known:
         rows = [
             index
@@ -319,8 +323,13 @@ def score_against_gallery(
         ]
         if not rows:
             raise ValueError(f"{identity} has no enrollment clips")
-        prototype = values[rows].mean(axis=0)
-        prototypes.append(prototype / max(float(np.linalg.norm(prototype)), 1e-12))
+        if scorer == "nearest-clip":
+            prototypes.extend(values[rows])
+            gallery_identities.extend([identity] * len(rows))
+        else:
+            prototype = values[rows].mean(axis=0)
+            prototypes.append(prototype / max(float(np.linalg.norm(prototype)), 1e-12))
+            gallery_identities.append(identity)
     gallery = np.asarray(prototypes)
 
     selected = set(known) | set(unknown)
@@ -339,7 +348,7 @@ def score_against_gallery(
                 "identity": record.identity,
                 "cohort": str(record.context.get("cohort", "")),
                 "is_known": record.identity in set(known),
-                "top_identity": known[top],
+                "top_identity": gallery_identities[top],
                 "maximum_score": float(scores[top]),
                 "clipped_over_slice_threshold": (
                     float(record.context["quality"]["clipped_sample_fraction"])
@@ -487,6 +496,7 @@ def evaluate_allocation(
     roles: dict[str, list[str]],
     standardise: bool,
     balanced: bool = True,
+    scorer: str = "mean-profile",
 ) -> dict[str, Any]:
     """Calibrate on one pair of roles, then score the other pair against it."""
 
@@ -503,6 +513,7 @@ def evaluate_allocation(
         unknown=roles["calibration_unknown"],
         partition="calibration",
         balanced=balanced,
+        scorer=scorer,
     )
     test = score_against_gallery(
         values=values,
@@ -511,6 +522,7 @@ def evaluate_allocation(
         unknown=roles["test_unknown"],
         partition="test",
         balanced=balanced,
+        scorer=scorer,
     )
     transferred: dict[str, dict[str, Any]] = {}
     for budget in STRANGER_BUDGETS:

@@ -62,7 +62,6 @@
     "src/xinyenyana/model_load_audit.py": "aae4d0106aaea0ad7e90c57f374a1dff2b4dd6ae5009e31b6943caaf6f997ba2",
     "src/xinyenyana/multiview_gate.py": "161bf1d28a9111be1655733b5f6e2f6ab16e06a7e9a8db79dd477033908b1b56",
     "src/xinyenyana/nuisance.py": "06ef295ca7403ff7b4e34ba1500f79f4e4f9ce41f3bdb770ccce37c260660ad2",
-    "src/xinyenyana/open_set.py": "b0b5ee2e368b2cd2bb763e644cbab66ecd7e883016f6412385f941b9428112a9",
     "src/xinyenyana/precision.py": "268434d751beeb522a58613910a038b6e9a91253acb4b1a35f9d716dbbff9568",
     "src/xinyenyana/replay.py": "eaf3f74e8f7e456963ae99e1c2ade66ed686729bcc64132fdb88191e1661a62f",
     "src/xinyenyana/representations.py": "642040c9c51c5434761d9579ab125876e5c7dda99c911c54a28b1cf61e6e97d9",
@@ -141,12 +140,12 @@
     "Protocol identity lists omitted; synthetic E01d test fixture",
     "No media, private correspondence, model weights or per-animal result records exported"
   ],
-  "correction_version": "0.2.0",
+  "correction_version": "0.3.0",
   "correction_date": "2026-10-04",
   "modified_files": {
     "pyproject.toml": {
       "export_sha256": "d9993f703401367a56838044478d1b62e9b75918bbf90f3c921f470652660474",
-      "corrected_sha256": "46a3707873b25eb6689f67be77d8f4a5854ef3430103d432864dbe36590be034"
+      "corrected_sha256": "7f5cdaffb54628ba4b29fe192bae71e5d9cadbe72d3bdde90f9f411bb8dce693"
     },
     "scripts/donor_direction.py": {
       "export_sha256": "fde9286b2fd68e6e9a82afac72d89fcb14815e312b43a35e7cfe3e7c4ae97775",
@@ -202,15 +201,25 @@
     },
     "uv.lock": {
       "export_sha256": "2fc6ed704e83e1923868a16d60727c23d285776fba659e7e53bf1c6dd248267f",
-      "corrected_sha256": "c79cdf62eb585f852382600bc212c7cd72e94cc2f6fcfaa854369a113c882647"
+      "corrected_sha256": "b8121deba59b5713562a9cad0b8fe887b618ef8e425a93a592bdf11a6188b67d"
+    },
+    "src/xinyenyana/open_set.py": {
+      "export_sha256": "b0b5ee2e368b2cd2bb763e644cbab66ecd7e883016f6412385f941b9428112a9",
+      "corrected_sha256": "a73566e5c18ae2584c20e73bb758730bec6f621dc3b51a59bac172b27a03566f"
     }
   },
   "added_code_files": {
     "src/xinyenyana/verification.py": "b2df0da1b9d0a6c67b2c280af3cc86842de3b70f28febcd95116e5b3dff1b773",
     "src/xinyenyana/cosine_controls.py": "d67017088d416a6ee71fe8d33463230685649878016c7922254d1963ea295b84",
     "tests/test_verification.py": "b94effa74ba788891076afb0a5b4665c5ab2e997a48b12313b6f7be86d39617a",
-    "tests/test_local_archive.py": "72eeb55f1a9532b0ff658c342b26c64d9e9f007846c76de92bd8084f28e71991"
+    "tests/test_local_archive.py": "72eeb55f1a9532b0ff658c342b26c64d9e9f007846c76de92bd8084f28e71991",
+    "src/xinyenyana/review_sensitivity.py": "6fdd54d63b111a09483f2a5a878cf717785b33fb22af979594875eb266e31a89",
+    "scripts/review_sensitivity.py": "3a790f7d95c31f0bad7d84cf2130a30e46fb970bcf544174df6f12e59c5674bc",
+    "tests/test_review_sensitivity.py": "4360b374509dbbb17299d69be4290d8367d501112115d54db62cd96d2474d83e",
+    "scripts/plot_review_sensitivity.py": "9c461971683e87c1f1b92e9ccae25a4264bb0f98db57c6f8d146ec1ba1289662",
+    "scripts/plot_review_open_set.py": "0f63688bb7497cd715e5cbb154ce9680836e5ec81565ef68bf09d034bb2b9616",
+    "scripts/project_review_sensitivity.py": "0d991459e2c5b3c1fb56e036310177c243f8023e68504c45271aa77acbf2091f"
   },
-  "correction_note": "The original export digests remain historical provenance. Corrected files are not represented as unchanged. Software verification does not establish the numerical impact on archived manuscript results.",
-  "version": "0.2.1"
+  "correction_note": "Retains the prior verification correction; adds review sensitivity analyses with a pre-execution fixed protocol, independently calibrated nearest-clip scoring, public aggregate projection and figure scripts. Full result provenance identifies the actual run revisions and original lock hash.",
+  "version": "0.3.0"
 }

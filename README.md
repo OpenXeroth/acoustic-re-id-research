@@ -2,15 +2,15 @@
 
 **Can a computer recognise an individual animal by its voice—or is it recognising the recording?**
 
-Research code accompanying *Recording context and data splitting can inflate acoustic re-identification accuracy across species and studies*, by Graham Wallington and Jackie Lighten (2026, author manuscript v8, 5 October 2026).
+Research code accompanying *Recording context and data splitting can inflate acoustic re-identification accuracy across species and studies*, by Graham Wallington and Jackie Lighten (2026, author manuscript v9, 5 October 2026).
 
-[Research website](https://open.xeroth.ai/acoustic-re-id-research/) · [Full paper (PDF)](https://open.xeroth.ai/papers/acoustic-re-id-v8.pdf) · [Supporting information](docs/supporting-information.md) · [Datasets](docs/datasets.md) · [Models](docs/models.md)
+[Research website](https://open.xeroth.ai/acoustic-re-id-research/) · [Full paper (PDF)](https://open.xeroth.ai/papers/acoustic-re-id-v9.pdf) · [Supporting information](docs/supporting-information.md) · [Datasets](docs/datasets.md) · [Models](docs/models.md) · [Review follow-up results](docs/review-sensitivity/README.md)
 
 We compare 36 pretrained neural networks and two simple controls across 13 datasets covering nine species. Background sound, recording sessions and data splitting can make individual recognition look more reliable than it is. The code tests these shortcuts and evaluates the harder task of recognising familiar animals while rejecting strangers. Djuma recordings are not part of this benchmark.
 
 **Verification complete:** all 224 required result files match their independent archive copies. The 19-run cached-vector audit reproduces classification, AUC and the reported paired-clip error rates. Final author approval is required before submission. See [publication status](docs/publication-status.md).
 
-[Software DOI: 10.5281/zenodo.23159972](https://doi.org/10.5281/zenodo.23159972) · [Evidence DOI: 10.5281/zenodo.23159989](https://doi.org/10.5281/zenodo.23159989)
+[Software DOI: 10.5281/zenodo.23167850](https://doi.org/10.5281/zenodo.23167850) · [Evidence DOI: 10.5281/zenodo.23167851](https://doi.org/10.5281/zenodo.23167851)
 
 ## Start here
 
