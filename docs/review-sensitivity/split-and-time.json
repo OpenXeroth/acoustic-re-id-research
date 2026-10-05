@@ -1,0 +1,545 @@
+{
+  "paired-time-birdpark-juv01.json": {
+    "endpoint": "birdpark-juv01",
+    "summary": {
+      "animal_1_to_7_days": {
+        "mean_cosine": null,
+        "pairs": 0
+      },
+      "animal_all": {
+        "mean_cosine": 0.8178940915076277,
+        "pairs": 751
+      },
+      "animal_over_7_days": {
+        "mean_cosine": 0.8178940915076277,
+        "pairs": 751
+      },
+      "animal_same_day": {
+        "mean_cosine": null,
+        "pairs": 0
+      },
+      "recording": {
+        "mean_cosine": 0.656957987358257,
+        "pairs": 3953
+      }
+    },
+    "source_sha256_original": "294fc522a59084dcce4f7e5f9b1bd0db94dfab220441966c7cfd5cf833a7125c",
+    "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433"
+  },
+  "matched-chiffchaff-birdnet.json": {
+    "experiment": "review-count-matched",
+    "species": "chiffchaff",
+    "model": "birdnet",
+    "clips": 6238,
+    "enrollment": 5107,
+    "query": 1131,
+    "identities": 13,
+    "summary": {
+      "kernel ridge to one-hot": {
+        "difference_95_individual_bootstrap": [
+          0.14737965367965367,
+          0.3149068190440061
+        ],
+        "difference_mean": 0.23510167992926612,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.9689655172413794,
+        "random_accuracy_range": [
+          0.9628647214854111,
+          0.9752431476569408
+        ],
+        "random_balanced_accuracy_mean": 0.9466352790726964,
+        "session_accuracy": 0.7338638373121131,
+        "session_balanced_accuracy": 0.7419058636298494
+      },
+      "mean cosine similarity to each identity": {
+        "difference_95_individual_bootstrap": [
+          0.2185446245608899,
+          0.4252319201768113
+        ],
+        "difference_mean": 0.3076923076923076,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.8099027409372237,
+        "random_accuracy_range": [
+          0.7922192749778957,
+          0.8267020335985853
+        ],
+        "random_balanced_accuracy_mean": 0.7963548236559858,
+        "session_accuracy": 0.502210433244916,
+        "session_balanced_accuracy": 0.5147203155497585
+      },
+      "single nearest enrollment clip, cosine": {
+        "difference_95_individual_bootstrap": [
+          0.25296786817845196,
+          0.4342792305016825
+        ],
+        "difference_mean": 0.34562334217506635,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.9406719717064546,
+        "random_accuracy_range": [
+          0.9301503094606542,
+          0.9531388152077808
+        ],
+        "random_balanced_accuracy_mean": 0.9162301273861239,
+        "session_accuracy": 0.5950486295313882,
+        "session_balanced_accuracy": 0.6022423906308026
+      }
+    },
+    "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433",
+    "manifest_sha256": "96d06f3b83ba9b00389bc6b98e050b71b2c1f56525a5f4c04336a60ef4aefa10",
+    "protocol_sha256": "22d2276709936df17b48ef208e5211dff7b3c69838afe4d3d9856242f927b0ec",
+    "cosine_medians": {
+      "session": 0.871572028723553,
+      "random": [
+        0.9069999007800725,
+        0.9061388089123641,
+        0.9059330042956468,
+        0.9061398596334905,
+        0.9073425282825849,
+        0.9091655483893928,
+        0.9086214048381955,
+        0.903419897623112,
+        0.906612863638214,
+        0.9086743259675394
+      ]
+    }
+  },
+  "paired-time-birdpark-juv03.json": {
+    "endpoint": "birdpark-juv03",
+    "summary": {
+      "animal_1_to_7_days": {
+        "mean_cosine": null,
+        "pairs": 0
+      },
+      "animal_all": {
+        "mean_cosine": 0.7262950311685195,
+        "pairs": 418
+      },
+      "animal_over_7_days": {
+        "mean_cosine": 0.7262950311685195,
+        "pairs": 418
+      },
+      "animal_same_day": {
+        "mean_cosine": null,
+        "pairs": 0
+      },
+      "recording": {
+        "mean_cosine": 0.7292586474494538,
+        "pairs": 6577
+      }
+    },
+    "source_sha256_original": "f1555bf2764cd0d214ad7858ef7cdd6b8932082e2917a91ee5bfa74114aa28dd",
+    "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433"
+  },
+  "matched-chiffchaff-google-perch.json": {
+    "experiment": "review-count-matched",
+    "species": "chiffchaff",
+    "model": "google-perch",
+    "clips": 6238,
+    "enrollment": 5107,
+    "query": 1131,
+    "identities": 13,
+    "summary": {
+      "kernel ridge to one-hot": {
+        "difference_95_individual_bootstrap": [
+          0.11999919484702094,
+          0.2695418037799186
+        ],
+        "difference_mean": 0.1959328028293546,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.9465959328028294,
+        "random_accuracy_range": [
+          0.9345711759504863,
+          0.9566755083996463
+        ],
+        "random_balanced_accuracy_mean": 0.9087308138902517,
+        "session_accuracy": 0.7506631299734748,
+        "session_balanced_accuracy": 0.735267852524919
+      },
+      "mean cosine similarity to each identity": {
+        "difference_95_individual_bootstrap": [
+          0.12834006675357368,
+          0.27565397662455715
+        ],
+        "difference_mean": 0.21821396993810788,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.6222811671087534,
+        "random_accuracy_range": [
+          0.5985853227232537,
+          0.6534040671971706
+        ],
+        "random_balanced_accuracy_mean": 0.6258637335186187,
+        "session_accuracy": 0.40406719717064543,
+        "session_balanced_accuracy": 0.45623053519390183
+      },
+      "single nearest enrollment clip, cosine": {
+        "difference_95_individual_bootstrap": [
+          0.22461360448807854,
+          0.3894990773797585
+        ],
+        "difference_mean": 0.3320954907161804,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.8183908045977011,
+        "random_accuracy_range": [
+          0.8090185676392573,
+          0.8417329796640142
+        ],
+        "random_balanced_accuracy_mean": 0.7854245685879006,
+        "session_accuracy": 0.48629531388152075,
+        "session_balanced_accuracy": 0.49406977198061736
+      }
+    },
+    "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433",
+    "manifest_sha256": "20782dda8e3d91e9236c1d9b5a02e95490c8d66bb17a5bc0b87557882e3b48fd",
+    "protocol_sha256": "22d2276709936df17b48ef208e5211dff7b3c69838afe4d3d9856242f927b0ec",
+    "cosine_medians": {
+      "session": 0.7587085306614798,
+      "random": [
+        0.8033458567157111,
+        0.8029140942852818,
+        0.7985575857020928,
+        0.8028476635764699,
+        0.8016233073958164,
+        0.8069494765680267,
+        0.8056301256791865,
+        0.7974429660333477,
+        0.7997811037726941,
+        0.802068341250217
+      ]
+    }
+  },
+  "matched-pipit-birdnet.json": {
+    "experiment": "review-count-matched",
+    "species": "pipit",
+    "model": "birdnet",
+    "clips": 712,
+    "enrollment": 409,
+    "query": 303,
+    "identities": 10,
+    "summary": {
+      "kernel ridge to one-hot": {
+        "difference_95_individual_bootstrap": [
+          0.3278893000862317,
+          0.6884138727924943
+        ],
+        "difference_mean": 0.5082508250825083,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.9273927392739273,
+        "random_accuracy_range": [
+          0.9042904290429042,
+          0.9471947194719472
+        ],
+        "random_balanced_accuracy_mean": 0.9218103929177784,
+        "session_accuracy": 0.41914191419141916,
+        "session_balanced_accuracy": 0.40375947199376744
+      },
+      "mean cosine similarity to each identity": {
+        "difference_95_individual_bootstrap": [
+          0.291347297342695,
+          0.5481795941284991
+        ],
+        "difference_mean": 0.41848184818481854,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.7815181518151815,
+        "random_accuracy_range": [
+          0.7458745874587459,
+          0.8151815181518152
+        ],
+        "random_balanced_accuracy_mean": 0.7716531780330592,
+        "session_accuracy": 0.36303630363036304,
+        "session_balanced_accuracy": 0.3418931309211445
+      },
+      "single nearest enrollment clip, cosine": {
+        "difference_95_individual_bootstrap": [
+          0.32528448275862076,
+          0.5920796332210541
+        ],
+        "difference_mean": 0.45874587458745875,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.8646864686468648,
+        "random_accuracy_range": [
+          0.834983498349835,
+          0.9075907590759076
+        ],
+        "random_balanced_accuracy_mean": 0.8627953002006483,
+        "session_accuracy": 0.40594059405940597,
+        "session_balanced_accuracy": 0.3951862059841686
+      }
+    },
+    "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433",
+    "manifest_sha256": "997a4a20d26685e7413f3308df5cdfd228fa2e56cadd984fb36ca4cb194cff7d",
+    "protocol_sha256": "22d2276709936df17b48ef208e5211dff7b3c69838afe4d3d9856242f927b0ec",
+    "cosine_medians": {
+      "session": 0.789134905589773,
+      "random": [
+        0.8493906509100313,
+        0.8434011717201442,
+        0.8514810351892703,
+        0.8405890630927237,
+        0.8409491729895112,
+        0.8444919615974056,
+        0.8471600937289783,
+        0.8454030622061357,
+        0.849564535591118,
+        0.8434011717201442
+      ]
+    }
+  },
+  "matched-pipit-google-perch.json": {
+    "experiment": "review-count-matched",
+    "species": "pipit",
+    "model": "google-perch",
+    "clips": 712,
+    "enrollment": 409,
+    "query": 303,
+    "identities": 10,
+    "summary": {
+      "kernel ridge to one-hot": {
+        "difference_95_individual_bootstrap": [
+          0.275250672709248,
+          0.6350490749038004
+        ],
+        "difference_mean": 0.4580858085808581,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.9102310231023101,
+        "random_accuracy_range": [
+          0.8877887788778878,
+          0.9438943894389439
+        ],
+        "random_balanced_accuracy_mean": 0.9055759835806526,
+        "session_accuracy": 0.4521452145214521,
+        "session_balanced_accuracy": 0.4449427270522347
+      },
+      "mean cosine similarity to each identity": {
+        "difference_95_individual_bootstrap": [
+          0.3389776357827476,
+          0.5432347802254274
+        ],
+        "difference_mean": 0.43960396039603955,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.7168316831683168,
+        "random_accuracy_range": [
+          0.6534653465346535,
+          0.7722772277227723
+        ],
+        "random_balanced_accuracy_mean": 0.7087051812081524,
+        "session_accuracy": 0.27722772277227725,
+        "session_balanced_accuracy": 0.27024956085227736
+      },
+      "single nearest enrollment clip, cosine": {
+        "difference_95_individual_bootstrap": [
+          0.2633538162286422,
+          0.5694538839059062
+        ],
+        "difference_mean": 0.41485148514851483,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.7712871287128713,
+        "random_accuracy_range": [
+          0.7491749174917491,
+          0.8085808580858086
+        ],
+        "random_balanced_accuracy_mean": 0.7671576871063289,
+        "session_accuracy": 0.3564356435643564,
+        "session_balanced_accuracy": 0.35582150023151715
+      }
+    },
+    "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433",
+    "manifest_sha256": "07dbe63582a442cee895cadcf3729d28a8eccf8289ed0a96a205ce6b0340be7c",
+    "protocol_sha256": "22d2276709936df17b48ef208e5211dff7b3c69838afe4d3d9856242f927b0ec",
+    "cosine_medians": {
+      "session": 0.6450100450487601,
+      "random": [
+        0.7098684385220402,
+        0.7012633835873509,
+        0.7184782494995252,
+        0.6947209332012769,
+        0.6989750692969559,
+        0.6973278987299525,
+        0.6989750692969559,
+        0.7061979713612266,
+        0.7118909079539847,
+        0.7085526889203602
+      ]
+    }
+  },
+  "paired-time-rookid-full-width.json": {
+    "endpoint": "rookid-full-width",
+    "summary": {
+      "animal_1_to_7_days": {
+        "mean_cosine": 0.7653348911315132,
+        "pairs": 205017
+      },
+      "animal_all": {
+        "mean_cosine": 0.7643029444264233,
+        "pairs": 1168249
+      },
+      "animal_over_7_days": {
+        "mean_cosine": 0.7696933048108034,
+        "pairs": 719210
+      },
+      "animal_same_day": {
+        "mean_cosine": 0.7475488496739562,
+        "pairs": 244022
+      },
+      "recording": {
+        "mean_cosine": 0.7313274401418368,
+        "pairs": 56625
+      }
+    },
+    "source_sha256_original": "d94f670c701871be876ad5cb6c031cd39a0ecb65caa6de00c1dbca2828d79273",
+    "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433"
+  },
+  "matched-littleowl-google-perch.json": {
+    "experiment": "review-count-matched",
+    "species": "littleowl",
+    "model": "google-perch",
+    "clips": 952,
+    "enrollment": 545,
+    "query": 407,
+    "identities": 16,
+    "summary": {
+      "kernel ridge to one-hot": {
+        "difference_95_individual_bootstrap": [
+          0.20125449522493985,
+          0.47862835617654886
+        ],
+        "difference_mean": 0.33292383292383293,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.9643734643734645,
+        "random_accuracy_range": [
+          0.9582309582309583,
+          0.972972972972973
+        ],
+        "random_balanced_accuracy_mean": 0.9639057966530566,
+        "session_accuracy": 0.6314496314496314,
+        "session_balanced_accuracy": 0.6251818027248235
+      },
+      "mean cosine similarity to each identity": {
+        "difference_95_individual_bootstrap": [
+          0.20252819485591164,
+          0.4664417291165889
+        ],
+        "difference_mean": 0.33587223587223586,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.8788697788697789,
+        "random_accuracy_range": [
+          0.8648648648648649,
+          0.8992628992628993
+        ],
+        "random_balanced_accuracy_mean": 0.87600527036709,
+        "session_accuracy": 0.542997542997543,
+        "session_balanced_accuracy": 0.5602871818348822
+      },
+      "single nearest enrollment clip, cosine": {
+        "difference_95_individual_bootstrap": [
+          0.2290101798439091,
+          0.5366936852826345
+        ],
+        "difference_mean": 0.3810810810810811,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.9633906633906635,
+        "random_accuracy_range": [
+          0.9606879606879607,
+          0.9705159705159705
+        ],
+        "random_balanced_accuracy_mean": 0.9643607041866217,
+        "session_accuracy": 0.5823095823095823,
+        "session_balanced_accuracy": 0.5913657912789299
+      }
+    },
+    "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433",
+    "manifest_sha256": "c00894e64a8b5fa03c4e30226543a650ebc58ddee079d4f519f5828cbfc07587",
+    "protocol_sha256": "22d2276709936df17b48ef208e5211dff7b3c69838afe4d3d9856242f927b0ec",
+    "cosine_medians": {
+      "session": 0.9010135510803877,
+      "random": [
+        0.946191586695475,
+        0.9496351126481907,
+        0.9491659603283624,
+        0.9477130083155831,
+        0.9474329976528917,
+        0.9502151489546804,
+        0.9498042253176087,
+        0.9478500443838866,
+        0.9456776655867263,
+        0.9451191622658466
+      ]
+    }
+  },
+  "matched-littleowl-birdnet.json": {
+    "experiment": "review-count-matched",
+    "species": "littleowl",
+    "model": "birdnet",
+    "clips": 952,
+    "enrollment": 545,
+    "query": 407,
+    "identities": 16,
+    "summary": {
+      "kernel ridge to one-hot": {
+        "difference_95_individual_bootstrap": [
+          0.35930820993264195,
+          0.6064112903225806
+        ],
+        "difference_mean": 0.485995085995086,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.9626535626535626,
+        "random_accuracy_range": [
+          0.9533169533169533,
+          0.972972972972973
+        ],
+        "random_balanced_accuracy_mean": 0.9610821038368172,
+        "session_accuracy": 0.47665847665847666,
+        "session_balanced_accuracy": 0.48858427985971065
+      },
+      "mean cosine similarity to each identity": {
+        "difference_95_individual_bootstrap": [
+          0.3427149020748498,
+          0.5815184739808069
+        ],
+        "difference_mean": 0.4668304668304668,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.8968058968058967,
+        "random_accuracy_range": [
+          0.8796068796068796,
+          0.9115479115479116
+        ],
+        "random_balanced_accuracy_mean": 0.8940563796293374,
+        "session_accuracy": 0.42997542997543,
+        "session_balanced_accuracy": 0.45192396503822363
+      },
+      "single nearest enrollment clip, cosine": {
+        "difference_95_individual_bootstrap": [
+          0.24883264678277192,
+          0.5456487394957983
+        ],
+        "difference_mean": 0.396068796068796,
+        "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+        "random_accuracy_mean": 0.9734643734643734,
+        "random_accuracy_range": [
+          0.9606879606879607,
+          0.9803439803439803
+        ],
+        "random_balanced_accuracy_mean": 0.9729782020356896,
+        "session_accuracy": 0.5773955773955773,
+        "session_balanced_accuracy": 0.5702188052812762
+      }
+    },
+    "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433",
+    "manifest_sha256": "782656325c29a566e2d094f48141e1c6be4dc409de45eeb42130b9a174ca48b3",
+    "protocol_sha256": "22d2276709936df17b48ef208e5211dff7b3c69838afe4d3d9856242f927b0ec",
+    "cosine_medians": {
+      "session": 0.8819952234708184,
+      "random": [
+        0.9366579058613096,
+        0.9412199839197751,
+        0.9374867318530143,
+        0.9396339685225297,
+        0.9393963099979741,
+        0.9395537231439121,
+        0.9403021082723735,
+        0.9407788688169457,
+        0.9374867318530143,
+        0.9375609730106156
+      ]
+    }
+  }
+}
