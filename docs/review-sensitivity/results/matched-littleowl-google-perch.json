@@ -1,0 +1,431 @@
+{
+  "clips": 952,
+  "code_revision": "84c26f1664d95eea36923d7b826bf1a0ebf7f433",
+  "cosine_medians": {
+    "random": [
+      0.946191586695475,
+      0.9496351126481907,
+      0.9491659603283624,
+      0.9477130083155831,
+      0.9474329976528917,
+      0.9502151489546804,
+      0.9498042253176087,
+      0.9478500443838866,
+      0.9456776655867263,
+      0.9451191622658466
+    ],
+    "session": 0.9010135510803877
+  },
+  "enrollment": 545,
+  "environment": {
+    "lease": "xw-cb8c6dc8",
+    "packages": {
+      "Jinja2": "3.1.6",
+      "Markdown": "3.10.3",
+      "MarkupSafe": "3.0.3",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "Werkzeug": "3.1.8",
+      "absl-py": "2.5.0",
+      "ai-edge-litert": "2.2.0",
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "astunparse": "1.6.3",
+      "audioread": "3.1.0",
+      "backports.strenum": "1.2.8",
+      "backports.zstd": "1.7.0",
+      "bacpipe": "1.3.5",
+      "birdnet": "1.1.0",
+      "bokeh": "3.9.2",
+      "botocore": "1.43.102",
+      "brotli": "1.2.0",
+      "certifi": "2026.7.22",
+      "cffi": "2.1.1",
+      "charset-normalizer": "3.5.1",
+      "cloudpickle": "3.1.2",
+      "contourpy": "1.4.0",
+      "cramjam": "2.12.1",
+      "cuda-bindings": "12.9.7",
+      "cuda-pathfinder": "1.6.0",
+      "cuda-toolkit": "12.8.1",
+      "cycler": "0.12.1",
+      "decorator": "5.3.1",
+      "einops": "0.8.2",
+      "etils": "1.14.0",
+      "fastparquet": "2026.5.0",
+      "filelock": "3.32.3",
+      "flatbuffers": "25.12.19",
+      "fonttools": "4.66.0",
+      "fsspec": "2026.7.0",
+      "gast": "0.7.0",
+      "google-pasta": "0.2.0",
+      "grpcio": "1.84.0",
+      "h11": "0.16.0",
+      "h5py": "3.16.0",
+      "hear21passt": "0.0.26",
+      "hf-xet": "1.6.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "huggingface_hub": "0.36.2",
+      "idna": "3.20",
+      "ijson": "3.5.1",
+      "importlib_resources": "7.1.0",
+      "inflate64": "1.0.4",
+      "jmespath": "1.1.0",
+      "joblib": "1.6.0",
+      "kagglehub": "0.3.13",
+      "keras": "3.11.3",
+      "kiwisolver": "1.5.1",
+      "lazy-loader": "0.6",
+      "libclang": "18.1.1",
+      "librosa": "1.0.0",
+      "linkify-it-py": "2.2.0",
+      "llvmlite": "0.49.0",
+      "markdown-it-py": "4.2.0",
+      "matplotlib": "3.11.2",
+      "mdit-py-plugins": "0.6.1",
+      "mdurl": "0.1.2",
+      "ml_collections": "1.1.0",
+      "ml_dtypes": "0.6.0",
+      "mpmath": "1.3.0",
+      "msgpack": "1.2.2",
+      "multivolumefile": "0.2.3",
+      "namex": "0.1.0",
+      "narwhals": "2.26.0",
+      "networkx": "3.6.1",
+      "nh3": "0.3.7",
+      "numba": "0.67.0",
+      "numpy": "2.5.3",
+      "nvidia-cublas-cu12": "12.8.4.1",
+      "nvidia-cuda-cupti-cu12": "12.8.90",
+      "nvidia-cuda-nvrtc-cu12": "12.8.93",
+      "nvidia-cuda-runtime-cu12": "12.8.90",
+      "nvidia-cudnn-cu12": "9.19.0.56",
+      "nvidia-cufft-cu12": "11.3.3.83",
+      "nvidia-cufile-cu12": "1.13.1.3",
+      "nvidia-curand-cu12": "10.3.9.90",
+      "nvidia-cusolver-cu12": "11.7.3.90",
+      "nvidia-cusparse-cu12": "12.5.8.93",
+      "nvidia-cusparselt-cu12": "0.7.1",
+      "nvidia-nccl-cu12": "2.28.9",
+      "nvidia-nvjitlink-cu12": "12.8.93",
+      "nvidia-nvshmem-cu12": "3.4.5",
+      "nvidia-nvtx-cu12": "12.8.90",
+      "onnxruntime": "1.30.0",
+      "opt_einsum": "3.4.0",
+      "optree": "0.20.0",
+      "ordered-set": "4.1.0",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "panel": "1.9.4",
+      "panel-material-ui": "0.15.0",
+      "param": "2.4.2",
+      "pillow": "12.3.0",
+      "pip": "26.2.1",
+      "platformdirs": "4.11.12",
+      "plotly": "7.1.0",
+      "pooch": "1.9.0",
+      "protobuf": "7.36.2",
+      "psutil": "7.2.2",
+      "py7zr": "1.1.3",
+      "pyarrow": "25.0.1",
+      "pybcj": "1.0.8",
+      "pycparser": "3.0",
+      "pycryptodomex": "3.23.0",
+      "pydantic": "2.13.5",
+      "pydantic_core": "2.46.5",
+      "pynndescent": "0.6.0",
+      "pyparsing": "3.3.3",
+      "pyppmd": "1.3.1",
+      "python-dateutil": "2.9.0.post0",
+      "pyviz_comms": "3.0.6",
+      "regex": "2026.9.10",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "safetensors": "0.8.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "seaborn": "0.13.2",
+      "setuptools": "81.0.0",
+      "shellingham": "1.5.4",
+      "six": "1.17.0",
+      "soundfile": "0.14.0",
+      "soxr": "1.1.0",
+      "sympy": "1.14.0",
+      "tensorboard": "2.20.0",
+      "tensorboard-data-server": "0.7.2",
+      "tensorflow": "2.20.0",
+      "tensorflow-hub": "0.16.0",
+      "termcolor": "3.3.0",
+      "texttable": "1.7.0",
+      "threadpoolctl": "3.7.0",
+      "timm": "1.0.11",
+      "tokenizers": "0.22.2",
+      "torch": "2.11.0+cu128",
+      "torchaudio": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "tornado": "6.5.10",
+      "tqdm": "4.70.1",
+      "transformers": "4.57.6",
+      "triton": "3.6.0",
+      "typer": "0.27.2",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "umap-learn": "0.5.12",
+      "urllib3": "2.8.0",
+      "wheel": "0.48.0",
+      "wrapt": "2.4.1",
+      "xyzservices": "2026.9.1"
+    },
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "experiment": "review-count-matched",
+  "identities": 16,
+  "lock_sha256": "bcb02906d2a640c344ba8c3e215f496b9e7810d622ce9c7d87968f5d8cb204e2",
+  "manifest_sha256": "c00894e64a8b5fa03c4e30226543a650ebc58ddee079d4f519f5828cbfc07587",
+  "model": "google-perch",
+  "original_result_sha256": "8c39d372ec1f43498717ca877ba12c055e1d53ff91826c9fedc4c3d8f59d3294",
+  "per_seed": [
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.9631449631449631,
+          "macro_recall": 0.9598878276115439
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8820638820638821,
+          "macro_recall": 0.8782734437980712
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9606879606879607,
+          "macro_recall": 0.9613048185046378
+        }
+      },
+      "seed": 101
+    },
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.9606879606879607,
+          "macro_recall": 0.9564005773919568
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8722358722358723,
+          "macro_recall": 0.8661336816986014
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9631449631449631,
+          "macro_recall": 0.9621309581223374
+        }
+      },
+      "seed": 102
+    },
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.9631449631449631,
+          "macro_recall": 0.964112904005738
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8820638820638821,
+          "macro_recall": 0.8809268734872087
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9606879606879607,
+          "macro_recall": 0.9610499332370956
+        }
+      },
+      "seed": 103
+    },
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.9606879606879607,
+          "macro_recall": 0.9614873362597547
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8894348894348895,
+          "macro_recall": 0.8828606526443223
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9631449631449631,
+          "macro_recall": 0.9646321862014797
+        }
+      },
+      "seed": 104
+    },
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.9680589680589681,
+          "macro_recall": 0.966472537878788
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8648648648648649,
+          "macro_recall": 0.862608897993322
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9656019656019657,
+          "macro_recall": 0.9648768407785062
+        }
+      },
+      "seed": 105
+    },
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.972972972972973,
+          "macro_recall": 0.9754528185535729
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8722358722358723,
+          "macro_recall": 0.8699254410324404
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9606879606879607,
+          "macro_recall": 0.9622140261625667
+        }
+      },
+      "seed": 106
+    },
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.9582309582309583,
+          "macro_recall": 0.9587289290778562
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8796068796068796,
+          "macro_recall": 0.881744916649932
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9680589680589681,
+          "macro_recall": 0.9670303465509378
+        }
+      },
+      "seed": 107
+    },
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.972972972972973,
+          "macro_recall": 0.96908340219095
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8771498771498771,
+          "macro_recall": 0.8761984447040034
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9606879606879607,
+          "macro_recall": 0.9636207820831204
+        }
+      },
+      "seed": 108
+    },
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.9656019656019657,
+          "macro_recall": 0.9686259833916084
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8992628992628993,
+          "macro_recall": 0.8995919971041786
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9705159705159705,
+          "macro_recall": 0.9736515514995484
+        }
+      },
+      "seed": 109
+    },
+    {
+      "heads": {
+        "kernel ridge to one-hot": {
+          "accuracy": 0.9582309582309583,
+          "macro_recall": 0.9588056501687967
+        },
+        "mean cosine similarity to each identity": {
+          "accuracy": 0.8697788697788698,
+          "macro_recall": 0.861788354558819
+        },
+        "single nearest enrollment clip, cosine": {
+          "accuracy": 0.9606879606879607,
+          "macro_recall": 0.9630955987259867
+        }
+      },
+      "seed": 110
+    }
+  ],
+  "protocol_sha256": "22d2276709936df17b48ef208e5211dff7b3c69838afe4d3d9856242f927b0ec",
+  "query": 407,
+  "runner_sha256": "be51ec794e49c6f751e0f16c39905fe84dfa7d18cda50fd5c666b34b797a568a",
+  "source_sha256": "81cc80854993f781366f957d20d75c59ae8f3400621b5ea5c2bf7b541ca6045e",
+  "species": "littleowl",
+  "split_hashes": {
+    "random": {
+      "101": "8b7f16b5bd8630b23133c0d2391c3cf2d61450def861c3d4cff52fdb9a60711a",
+      "102": "cabb010cd2502b339b2f1441ffe741d1a9d8902025b7cf119d69de00ee1f9581",
+      "103": "8030f55de15eafd68a2458ef07a2b79dafc5609ec5eeb8eb4d8fe19aff5bcb9e",
+      "104": "8e72271dacbd893442ebdcbccac6ad9d2c445729be152e1010713b033b283309",
+      "105": "f1331ba60b222cf607f06297e5308b97187f3d895b7fb5635643264b8828bee9",
+      "106": "04fd4fd074f3f1c58ca95f3f093ce85d1891fcc61e68ad8486cb200a7c5d9d9c",
+      "107": "a823a595d2b7bbf073caa6a82cbd86173c2bb2333bd23f65e2315a49499e00cb",
+      "108": "7e6a2c3b8d99740d2d05005553810f0dc881f09f001cb0a0dec1b759fe310454",
+      "109": "75125f606109d86e57550ed03e0f43b51dea680f9a7158530583f46f3b7afb14",
+      "110": "cf9972b2eea79062eaaaa6b005bf491edda4f0335b4cfb64990ab26fe1ee85b5"
+    },
+    "session": "3d207f061635b77062d36cfbf8d4ff8bd2c3341d27587c9e9e15a8b5a5614925"
+  },
+  "summary": {
+    "kernel ridge to one-hot": {
+      "difference_95_individual_bootstrap": [
+        0.20125449522493985,
+        0.47862835617654886
+      ],
+      "difference_mean": 0.33292383292383293,
+      "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+      "random_accuracy_mean": 0.9643734643734645,
+      "random_accuracy_range": [
+        0.9582309582309583,
+        0.972972972972973
+      ],
+      "random_balanced_accuracy_mean": 0.9639057966530566,
+      "session_accuracy": 0.6314496314496314,
+      "session_balanced_accuracy": 0.6251818027248235
+    },
+    "mean cosine similarity to each identity": {
+      "difference_95_individual_bootstrap": [
+        0.20252819485591164,
+        0.4664417291165889
+      ],
+      "difference_mean": 0.33587223587223586,
+      "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+      "random_accuracy_mean": 0.8788697788697789,
+      "random_accuracy_range": [
+        0.8648648648648649,
+        0.8992628992628993
+      ],
+      "random_balanced_accuracy_mean": 0.87600527036709,
+      "session_accuracy": 0.542997542997543,
+      "session_balanced_accuracy": 0.5602871818348822
+    },
+    "single nearest enrollment clip, cosine": {
+      "difference_95_individual_bootstrap": [
+        0.2290101798439091,
+        0.5366936852826345
+      ],
+      "difference_mean": 0.3810810810810811,
+      "interval_conditions": "10 fixed random splits; individuals resampled jointly",
+      "random_accuracy_mean": 0.9633906633906635,
+      "random_accuracy_range": [
+        0.9606879606879607,
+        0.9705159705159705
+      ],
+      "random_balanced_accuracy_mean": 0.9643607041866217,
+      "session_accuracy": 0.5823095823095823,
+      "session_balanced_accuracy": 0.5913657912789299
+    }
+  }
+}
