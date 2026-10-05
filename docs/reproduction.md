@@ -26,16 +26,18 @@ The package name remains `xinyenyana` to preserve imports and the research code'
 uv run xinyenyana --local-archive /absolute/path/to/results run-a6 --help
 ```
 
-This removes the authors' infrastructure dependency; it does not supply the missing original datasets/manifests, model environments or numerical evidence.
+This removes the authors' infrastructure dependency. Original recordings and model weights must still be obtained under their publishers' terms; do not redistribute them with this package.
 
-`uv.lock` pins the base package and optional dependencies declared in `pyproject.toml`. It is **not** a lock for every Bacpipe/AVEX/Transformers/TensorFlow/PyTorch GPU environment used in the experiments. Those model-specific package inventories and weight hashes belong to the original evidence archive. Installing current model packages alone is not an exact reconstruction.
+`uv.lock` pins the base package and optional dependencies declared in `pyproject.toml`. It is **not** a lock for every Bacpipe/AVEX/Transformers/TensorFlow/PyTorch GPU environment used in the experiments. The evidence deposit includes three retained package inventories, original model-load provenance and 180 weight-file checksums. Installing current model packages alone is not an exact reconstruction.
 
 ## Rebuild paper tables from archived results
 
 `scripts/paper_v6_build.sh OUTPUT_DIRECTORY` orchestrates the analysis and integrity gates. Its environment variables (`RESULTS`, `HEADLINE`, `V5`, `WEIGHTS`, `SUPPLEMENTAL`, `V5_GATE`, `BAT`, `PY`) identify required result directories and ledgers. Read the script before running it. The evidence gate rejects incomplete or mismatched inventories; it must not be bypassed to generate a publication table.
 
-The numerical result archive and per-animal records are not included in this release. The research machine was unavailable when this public package was prepared. Software verification therefore does not certify a fresh reproduction of the manuscript's numbers. The manuscript and supporting information contain the published aggregate tables; an independently downloadable, redacted numerical evidence bundle remains outstanding.
+Download the [v8 evidence bundle](https://doi.org/10.5281/zenodo.23159989) separately. Its README and SHA256SUMS describe 224 aggregate projections and their original hashes, anonymous split membership, model/environment provenance and the cached-vector audit. Verify its checksums before use. The projections deliberately omit real annotations and per-clip observations, so they cannot be substituted blindly into the historical evidence gate, which checks original bytes and schemas. Do not disable that gate.
+
+For a fresh inference run, reconstruct local annotations using the original publishers' data and the anonymous split membership/audio hashes; retain those real annotations locally. The software does not fetch restricted media, annotations or model weights automatically. The publication audit reused retained vectors and did not repeat all model inference.
 
 ## Manuscript version
 
-The linked PDF and supporting information are author manuscript v8, a corrected draft. The paired-clip error-rate impact audit and author declarations remain outstanding; it is not labelled submission-ready or peer-reviewed. Internal `v6` and `v7` script names identify their historical analysis generation. See [publication status](publication-status.md).
+The linked PDF and supporting information are author manuscript v8, dated 5 October 2026, prepared for final author approval. The paired-clip audit and funding/interest declarations are complete; the work is not yet submitted or peer reviewed. Internal `v6` and `v7` script names identify their historical analysis generation. See [publication status](publication-status.md).

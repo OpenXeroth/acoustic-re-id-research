@@ -2,13 +2,15 @@
 
 **Can a computer recognise an individual animal by its voice—or is it recognising the recording?**
 
-Research code accompanying *Recording context and data splitting can inflate acoustic re-identification accuracy across species and studies*, by Graham Wallington and Jackie Lighten (2026, author manuscript v8, corrected draft).
+Research code accompanying *Recording context and data splitting can inflate acoustic re-identification accuracy across species and studies*, by Graham Wallington and Jackie Lighten (2026, author manuscript v8, 5 October 2026).
 
-[Research website](https://open.xeroth.ai/acoustic-re-id-research/) · [Full paper (PDF)](https://open.xeroth.ai/papers/acoustic-re-id-v8-draft.pdf) · [Supporting information](docs/supporting-information.md) · [Datasets](docs/datasets.md) · [Models](docs/models.md)
+[Research website](https://open.xeroth.ai/acoustic-re-id-research/) · [Full paper (PDF)](https://open.xeroth.ai/papers/acoustic-re-id-v8.pdf) · [Supporting information](docs/supporting-information.md) · [Datasets](docs/datasets.md) · [Models](docs/models.md)
 
 We compare 36 pretrained neural networks and two simple controls across 13 datasets covering nine species. Background sound, recording sessions and data splitting can make individual recognition look more reliable than it is. The code tests these shortcuts and evaluates the harder task of recognising familiar animals while rejecting strangers. Djuma recordings are not part of this benchmark.
 
-**Publication checks remain open:** historical paired-clip error rates need verification with corrected tie handling, and author declarations need confirmation. See [corrections and outstanding work](docs/publication-status.md).
+**Verification complete:** all 224 required result files match their independent archive copies. The 19-run cached-vector audit reproduces classification, AUC and the reported paired-clip error rates. Final author approval is required before submission. See [publication status](docs/publication-status.md).
+
+[Software DOI: 10.5281/zenodo.23159972](https://doi.org/10.5281/zenodo.23159972) · [Evidence DOI: 10.5281/zenodo.23159989](https://doi.org/10.5281/zenodo.23159989)
 
 ## Start here
 
@@ -34,10 +36,10 @@ These software tests use synthetic fixtures and do not download recordings or ru
 
 See [reproduction and current limits](docs/reproduction.md), [source provenance](docs/provenance.json), [contributing](CONTRIBUTING.md) and the [documentation index](docs/index.md).
 
-This release publishes the code, not the private result archive, recordings or weights. The paper's complete numerical analysis has not been rerun for this release. Per-animal annotations and private operational material are excluded. Public dataset access is through the original publishers.
+The separate evidence deposit contains aggregate projections of all 224 required results, anonymous split membership, original environments and weight inventories, source checksums and the verification audit. Projections exclude real identity annotations, per-clip observations, recordings and embeddings. They are not byte-identical substitutes for the original records. A fresh model-inference run requires original datasets and weights from their publishers and locally reconstructed annotations; the publication audit reused retained vectors rather than rerunning inference.
 
 ## Licence and citation
 
-Original research code is released under [Apache-2.0](LICENSE). Third-party data, models and libraries retain their own licences, which may restrict commercial use. The manuscript and supporting information are author publications; the software licence does not relicense them. See [NOTICE](NOTICE) and [CITATION.cff](CITATION.cff).
+Original research code is released under [Apache-2.0](LICENSE). Third-party data, models and libraries retain their own licences, which may restrict commercial use. The manuscript, supporting information and original evidence documentation are CC BY-NC 4.0: attributed sharing and adaptation for non-commercial purposes. Software remains Apache-2.0, including its commercial-use permission. Third-party terms are unaffected. See [NOTICE](NOTICE) and [CITATION.cff](CITATION.cff).
 
 NatureCam is part of [Xeroth](https://xeroth.ai). [OpenXeroth](https://open.xeroth.ai/) shares its research and open-source work.

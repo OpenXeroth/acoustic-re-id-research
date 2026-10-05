@@ -1,32 +1,23 @@
-# Author manuscript v8: correction status
+# Author manuscript v8: publication status
 
-This is a corrected author draft, not a bioRxiv submission or a peer-reviewed article.
-The original v7 release remains available under `paper-v7-2026-10-02`.
+Version 8, 5 October 2026, is prepared for final author approval before bioRxiv submission. It is not peer reviewed. The original v7 and corrected v8-draft files remain available.
 
-## Completed in this revision
+## Completed
 
-- Excluded the raw duration and loudness controls from Tables S10 and S15 and their cosine-only analysis paths. The valid kernel-ridge control results remain. Table renderers and summary counts apply the same exclusions, including when reading historical archives.
-- Corrected tied-score handling in paired verification and classifier verification diagnostics. Equal scores enter together at attainable thresholds; low-FAR acceptance cannot be obtained by ordering tied observations using their true labels. Added regression tests. This software correction is not a numerical rerun of the paper.
-- Reported both fruit-bat correlations and the dependence on the session-mean settings; clarified preprocessing, splits, standardisation, bootstrap p values and evidence-gate scope.
-- Corrected the availability statement, linked the public release, and described internal pre-specification accurately.
-- Added explicit independent-compute execution with a local content-addressed archive, without a fabricated XenWarden receipt. The managed-compute defaults remain intact.
-- Added the missing public documentation entry points and XEUS model link. The public protocol summary is retrospective documentation, not evidence of prospective registration.
+- Corrected tied-score verification and excluded invalid raw magnitude controls from cosine-only analyses. The valid kernel-ridge controls remain.
+- Recomputed all 19 retained BirdNET headline/rook variants from original cached embeddings. Manifest, query order and pair summaries match; per-query correctness and classifier AUC reproduce exactly. All paired EER values in Tables S3/S4 and classifier EERs are unchanged. Some true-accept rates differ only by floating-point rounding below 10⁻¹⁵. Full audit: [evidence DOI](https://doi.org/10.5281/zenodo.23159989).
+- Checked all 224 required original results against their content hashes and independent GCS object sizes/MD5 values: 224/224 match.
+- Recovered all 108 sweep/refresh/replay source digests. Their initial sweep diagnostics use 999 permutations and 2,000 bootstrap draws; the manuscript now distinguishes these from the 9,999/10,000 headline/background analyses and 10,000 paired-comparison draws.
+- Confirmed 11 whales, 162 enrolment and 72 test calls, with paired noise counts, in all 11 original frequency-shift manifests.
+- Released aggregate projections of the 224 results, anonymous split membership (including the 16-bird great-tit and zebra-finch cohorts), three retained package inventories, model provenance and weight hashes. Media, embeddings, real identity annotations and per-clip observations are excluded.
+- Established that the retained BirdNET v3 preview ONNX file differs from Zenodo 18247420 preview3. The paper identifies the actual Bacpipe-supplied file and its SHA-256 instead.
+- Confirmed funding and interests: Xeroth AI Limited funded the research; Graham Wallington is CEO, Jackie Lighten is COO, and both are shareholders. Their roles in the work are disclosed.
+- Assigned version-specific archive citations: [software 0.2.1](https://doi.org/10.5281/zenodo.23159972) and [v8 evidence](https://doi.org/10.5281/zenodo.23159989). Manuscript/evidence documentation: CC BY-NC 4.0; existing software: Apache-2.0; third-party terms unchanged.
 
-## Required before submission
+## Final author step
 
-1. Recompute the paired-clip equal error rates in Tables S3 and S4 from the archived embeddings/scores, and audit all uses of `evaluation.verification_metrics` for tied-score effects. Retain the source hashes, original and corrected values and the new code digest. The draft labels the historical paired-clip error rates as awaiting verification. Do not treat passing software tests as this check.
-2. Confirm the actual funding, each author's employment/ownership or other financial interests, and the funder's role. Replace the pending declaration with factual text; do not assert that the company had no role without evidence.
-3. Obtain all authors' consent to this corrected version and agree the bioRxiv reuse licence. Then export the final main PDF and separate supporting-information PDF with the same version label.
-4. Review the original corrected-sweep, speech, selection-refresh and speech-replay records for resampling counts where the original evidence gate did not enforce them. Recheck the right-whale sample count from its original manifest.
+Jackie must approve the final main manuscript, separate supporting information, declarations and submission. Graham can then submit the prepared files through his bioRxiv account. No preprint DOI exists until bioRxiv assigns it; that DOI must subsequently be added to the repository and research page.
 
-The research host was unreachable and the available archive credentials did not permit an exact-object read during preparation. These are access limits, not evidence that archived results are missing. The score audit and record checks can run on a CPU once the relevant files are available; new GPU inference is not intrinsically required.
+The audit covers the reported paired EERs and headline verification diagnostics. The shared classifier AUC calculation is unchanged by the software correction. Historical unused classifier EER/TAR diagnostics in the aggregate archive have not all been recomputed; they must not be described as newly validated results. Open-set statistics use a separate implementation. No new model inference or additional scientific experiment is claimed.
 
-## Evidence release and citation work still outstanding
-
-- Obtain and review the 224 result files, split definitions and the missing 16-bird great-tit/zebra-finch construction manifests. Release a permission-checked evidence bundle with checksums, excluding restricted media, restricted embeddings and disallowed identity annotations. The current public release does not support an end-to-end numerical reproduction.
-- Recover the original model-specific package inventories, checkpoint revisions, weight digests and numerical-precision settings from the retained run records. Do not substitute today's package versions for the environment actually used. BirdNET `1.1.0` and Bacpipe `1.3.5` are documented; they are not a full GPU environment lock.
-- Verify whether the BirdNET v3 preview weights match Zenodo record 18247420 before identifying that deposit as the exact model used.
-- Archive the corrected software release on Zenodo when an authenticated publishing account is available; cite its version DOI. A software DOI is useful, but is not listed as a prerequisite in the [bioRxiv submission guide](https://www.biorxiv.org/submit-a-manuscript).
-- After bioRxiv assigns the preprint DOI, update `CITATION.cff`, README and the research page. Do not invent or reserve a preprint DOI locally.
-
-The Djuma/BirdNET-Cloud geography review, broader website presentation changes, journal-length editing and proposed additional GPU experiments are separate work.
+Djuma/BirdNET-Cloud geography and additional experimental comparisons remain separate from this manuscript release.
