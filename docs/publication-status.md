@@ -1,8 +1,17 @@
-# Author manuscript v8: publication status
+# Author manuscript v9: publication status
 
-Version 8, 5 October 2026, is prepared for final author approval before bioRxiv submission. It is not peer reviewed. The original v7 and corrected v8-draft files remain available.
+Version 9, 5 October 2026, is prepared for final author approval before bioRxiv submission. It is not peer reviewed. The original v7 and v8 files remain available.
 
-## Completed
+## Review follow-up
+
+- Completed and independently archived all 194 new result files: six count-matched comparisons, 185 open-set model/endpoint outputs (including five explicitly uncounted duplicate checkpoints), and three descriptive timing controls.
+- All 18 count-matched classifier comparisons retain the split effect (mean differences 0.196–0.508). The revised headline states the clip split unit and intended new-session task.
+- Tested both open-set scorers with independent calibration; the highest median on wild session-disjoint endpoints changes from 37.4% to 46.2%. Neither is a performance ceiling.
+- Tested 4/8/12 calibration strangers without changing galleries or test roles. More calibration strangers did not consistently resolve transfer of the threshold.
+- Reported balanced background accuracy and separate majority references. BirdPark timing controls within seven days are unavailable in the retained test clips; fixed-donor rotation is explicitly unperformed.
+- Updated native manuscripts, figures, supporting information and public explanations. See the [complete follow-up report](review-sensitivity/README.md) and [fixed protocol](experiments/review-sensitivity.md).
+
+## Previous verification audit retained
 
 - Corrected tied-score verification and excluded invalid raw magnitude controls from cosine-only analyses. The valid kernel-ridge controls remain.
 - Recomputed all 19 retained BirdNET headline/rook variants from original cached embeddings. Manifest, query order and pair summaries match; per-query correctness and classifier AUC reproduce exactly. All paired EER values in Tables S3/S4 and classifier EERs are unchanged. Some true-accept rates differ only by floating-point rounding below 10⁻¹⁵. Full audit: [evidence DOI](https://doi.org/10.5281/zenodo.23159989).
@@ -14,10 +23,14 @@ Version 8, 5 October 2026, is prepared for final author approval before bioRxiv 
 - Confirmed funding and interests: Xeroth AI Limited funded the research; Graham Wallington is CEO, Jackie Lighten is COO, and both are shareholders. Their roles in the work are disclosed.
 - Assigned version-specific archive citations: [software 0.2.1](https://doi.org/10.5281/zenodo.23159972) and [v8 evidence](https://doi.org/10.5281/zenodo.23159989). Manuscript/evidence documentation: CC BY-NC 4.0; existing software: Apache-2.0; third-party terms unchanged.
 
+## Current archives
+
+[Software 0.3.0](https://doi.org/10.5281/zenodo.23167850) and [v9 evidence](https://doi.org/10.5281/zenodo.23167851) include the review follow-up. Earlier version-specific archives remain unchanged.
+
 ## Final author step
 
 Jackie must approve the final main manuscript, separate supporting information, declarations and submission. Graham can then submit the prepared files through his bioRxiv account. No preprint DOI exists until bioRxiv assigns it; that DOI must subsequently be added to the repository and research page.
 
-The audit covers the reported paired EERs and headline verification diagnostics. The shared classifier AUC calculation is unchanged by the software correction. Historical unused classifier EER/TAR diagnostics in the aggregate archive have not all been recomputed; they must not be described as newly validated results. Open-set statistics use a separate implementation. No new model inference or additional scientific experiment is claimed.
+The audit covers the reported paired EERs and headline verification diagnostics. The shared classifier AUC calculation is unchanged by the software correction. Historical unused classifier EER/TAR diagnostics in the aggregate archive have not all been recomputed; they must not be described as newly validated results. Open-set statistics use a separate implementation. The previous audit did not perform new model inference. The new follow-up analyses reuse frozen embeddings; they are described separately above.
 
-Djuma/BirdNET-Cloud geography and additional experimental comparisons remain separate from this manuscript release.
+Djuma/BirdNET-Cloud geography remains separate from this manuscript release. Final author approval, bioRxiv submission and the subsequent bioRxiv DOI link remain author steps.

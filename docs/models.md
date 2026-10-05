@@ -32,4 +32,4 @@ The base uv.lock is not the complete GPU inference environment. Exact model load
 
 ## Retained provenance
 
-The [v8 evidence deposit](https://doi.org/10.5281/zenodo.23159989) includes original package inventories, model load provenance, checkpoint paths/revisions and 180 weight-file digests. The BirdNET v3 preview ONNX used here is 541,624,087 bytes, SHA-256 `6f58d7ffa4c33bf49c8c67ac27bc5265a940a139cb67254477997bad41efc16d`. It differs from the 541,391,777-byte preview3 ONNX in [Zenodo 18247420](https://zenodo.org/records/18247420); that record is not cited as the exact checkpoint used. No model files are redistributed.
+The [v9 evidence deposit](https://doi.org/10.5281/zenodo.23167851) includes original package inventories, model load provenance, checkpoint paths/revisions and 180 weight-file digests. The BirdNET v3 preview ONNX used here is 541,624,087 bytes, SHA-256 `6f58d7ffa4c33bf49c8c67ac27bc5265a940a139cb67254477997bad41efc16d`. It differs from the 541,391,777-byte preview3 ONNX in [Zenodo 18247420](https://zenodo.org/records/18247420); that record is not cited as the exact checkpoint used. No model files are redistributed.
