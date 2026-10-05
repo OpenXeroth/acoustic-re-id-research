@@ -214,7 +214,7 @@
     "tests/test_verification.py": "b94effa74ba788891076afb0a5b4665c5ab2e997a48b12313b6f7be86d39617a",
     "tests/test_local_archive.py": "72eeb55f1a9532b0ff658c342b26c64d9e9f007846c76de92bd8084f28e71991",
     "src/xinyenyana/review_sensitivity.py": "6fdd54d63b111a09483f2a5a878cf717785b33fb22af979594875eb266e31a89",
-    "scripts/review_sensitivity.py": "be51ec794e49c6f751e0f16c39905fe84dfa7d18cda50fd5c666b34b797a568a",
+    "scripts/review_sensitivity.py": "3a790f7d95c31f0bad7d84cf2130a30e46fb970bcf544174df6f12e59c5674bc",
     "tests/test_review_sensitivity.py": "4360b374509dbbb17299d69be4290d8367d501112115d54db62cd96d2474d83e"
   },
   "correction_note": "The original export digests remain historical provenance. Corrected files are not represented as unchanged. Software verification does not establish the numerical impact on archived manuscript results.",

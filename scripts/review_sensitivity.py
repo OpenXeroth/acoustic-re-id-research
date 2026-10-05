@@ -12,6 +12,7 @@ import os
 import re
 import subprocess
 import sys
+from dataclasses import replace
 from datetime import datetime
 from pathlib import Path
 
@@ -22,6 +23,7 @@ from xinyenyana.archive import archive_result, canonical_sha256, sha256_file, so
 from xinyenyana.cli import _load_endpoint
 from xinyenyana.cosine_controls import is_control
 from xinyenyana.huang import load_published_vectors
+from xinyenyana.identity_run import balance_enrolment
 from xinyenyana.open_set import evaluate_allocation, summarise_allocations
 from xinyenyana.review_sensitivity import SPLIT_SEEDS, matched_rows, score_split, split_summary
 
@@ -114,9 +116,12 @@ def open_runs(root, out):
         "cockatoo-fold1",
     ):
         ep = endpoint(root, name)
+        if name == "rookid-full-width":
+            ep = replace(ep, records=tuple(balance_enrolment(ep.records, 90)))
         source = folder / f"v6-open-set-{name}.json"
         original = json.loads(source.read_text())
         assert original["manifest_sha256"] == ep.manifest_sha256
+        assert original["splits"] == ep.split_digests()
         rows = [
             i
             for i, r in enumerate(ep.records)
