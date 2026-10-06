@@ -1,6 +1,15 @@
-# Author manuscript v9: publication status
+# Author manuscript v10: publication status
 
-Version 9, 5 October 2026, is prepared for final author approval before bioRxiv submission. It is not peer reviewed. The original v7 and v8 files remain available.
+Version 10, 6 October 2026, incorporates the final editorial corrections and is approved by the authors for bioRxiv submission. It has not yet been submitted or peer reviewed. Previous versions remain available.
+
+## Final editorial pass
+
+- Corrected the abstract and opening Discussion to describe substantial background identity information, with balanced accuracy 0.714 versus 0.791 for calls, without implying equivalence.
+- Added the zebra-finch timing caveat to the Discussion and used “random split of individual clips” consistently.
+- Qualified the abstract’s 46% as the highest observed median across 36 networks and two scorers, with four enrolled birds.
+- Simplified the software-licence sentence and retained the agreed CC BY-NC terms in archive and submission metadata.
+- Adopted the illustrated graphical abstract with matching timing, data-availability and open-set qualifications.
+- No experiments, aggregate results or analysis software changed. Software remains version 0.3.0.
 
 ## Review follow-up
 
@@ -25,12 +34,12 @@ Version 9, 5 October 2026, is prepared for final author approval before bioRxiv 
 
 ## Current archives
 
-[Software 0.3.0](https://doi.org/10.5281/zenodo.23167850) and [v9 evidence](https://doi.org/10.5281/zenodo.23167851) include the review follow-up. Earlier version-specific archives remain unchanged.
+[Software 0.3.0](https://doi.org/10.5281/zenodo.23167850) and [v10 evidence](https://doi.org/10.5281/zenodo.23174588) contain the review follow-up and final publication documents. Earlier version-specific archives remain unchanged.
 
 ## Final author step
 
-Jackie must approve the final main manuscript, separate supporting information, declarations and submission. Graham can then submit the prepared files through his bioRxiv account. No preprint DOI exists until bioRxiv assigns it; that DOI must subsequently be added to the repository and research page.
+The final editorial conditions have been addressed and author sign-off is recorded. Graham can submit the prepared main manuscript and separate supporting information through his bioRxiv account, then inspect and approve the portal-generated proof. No preprint DOI exists until bioRxiv assigns it; that DOI must subsequently be added to the repository and research page.
 
 The audit covers the reported paired EERs and headline verification diagnostics. The shared classifier AUC calculation is unchanged by the software correction. Historical unused classifier EER/TAR diagnostics in the aggregate archive have not all been recomputed; they must not be described as newly validated results. Open-set statistics use a separate implementation. The previous audit did not perform new model inference. The new follow-up analyses reuse frozen embeddings; they are described separately above.
 
-Djuma/BirdNET-Cloud geography remains separate from this manuscript release. Final author approval, bioRxiv submission and the subsequent bioRxiv DOI link remain author steps.
+Djuma/BirdNET-Cloud geography remains separate from this manuscript release. Portal submission/proof approval and the subsequent bioRxiv DOI link remain the final steps. A planned submission date is not a guaranteed posting date: bioRxiv screens submitted manuscripts.

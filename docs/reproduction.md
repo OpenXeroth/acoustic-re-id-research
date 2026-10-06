@@ -34,13 +34,13 @@ This removes the authors' infrastructure dependency. Original recordings and mod
 
 `scripts/paper_v6_build.sh OUTPUT_DIRECTORY` orchestrates the analysis and integrity gates. Its environment variables (`RESULTS`, `HEADLINE`, `V5`, `WEIGHTS`, `SUPPLEMENTAL`, `V5_GATE`, `BAT`, `PY`) identify required result directories and ledgers. Read the script before running it. The evidence gate rejects incomplete or mismatched inventories; it must not be bypassed to generate a publication table.
 
-Download the [v9 evidence bundle](https://doi.org/10.5281/zenodo.23167851) separately. Its README and SHA256SUMS describe 224 aggregate projections and their original hashes, anonymous split membership, model/environment provenance and the cached-vector audit. Verify its checksums before use. The projections deliberately omit real annotations and per-clip observations, so they cannot be substituted blindly into the historical evidence gate, which checks original bytes and schemas. Do not disable that gate.
+Download the [v10 evidence bundle](https://doi.org/10.5281/zenodo.23174588) separately. The final documents are in `papers/`; `prior-v9/acoustic-re-id-evidence-v9.zip` preserves the follow-up results and the nested original v8 archive. Its README and checksum manifests describe 194 follow-up and 224 original aggregate projections and their original hashes, anonymous split membership, model/environment provenance and the cached-vector audit. Verify its checksums before use. The projections deliberately omit real annotations and per-clip observations, so they cannot be substituted blindly into the historical evidence gate, which checks original bytes and schemas. Do not disable that gate.
 
 For a fresh inference run, reconstruct local annotations using the original publishers' data and the anonymous split membership/audio hashes; retain those real annotations locally. The software does not fetch restricted media, annotations or model weights automatically. The publication audit reused retained vectors and did not repeat all model inference.
 
 ## Manuscript version
 
-The linked PDF and supporting information are author manuscript v9, dated 5 October 2026, prepared for final author approval. The paired-clip audit and funding/interest declarations are complete; the work is not yet submitted or peer reviewed. Internal `v6` and `v7` script names identify their historical analysis generation. See [publication status](publication-status.md).
+The linked PDF and supporting information are author manuscript v10, dated 6 October 2026, approved by the authors for bioRxiv submission. The paired-clip audit and funding/interest declarations are complete; the work is not yet submitted or peer reviewed. Internal `v6` and `v7` script names identify their historical analysis generation. See [publication status](publication-status.md).
 
 ## Review sensitivity follow-up
 

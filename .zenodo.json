@@ -11,7 +11,7 @@
       "affiliation": "Xeroth AI Limited"
     }
   ],
-  "description": "Research software for recording-context diagnostics in acoustic animal re-identification. Version 0.3.0 adds count-matched random-clip comparisons over ten fixed seeds, an independently calibrated nearest-clip open-set scorer, calibration-size sensitivity and descriptive timing controls. The original mean-profile results are retained and verified during the comparison. See the v9 evidence deposit for aggregate results and provenance. Software is Apache-2.0; manuscript and original evidence documentation are CC BY-NC 4.0; third-party terms remain separate.",
+  "description": "Research software for recording-context diagnostics in acoustic animal re-identification. Version 0.3.0 adds count-matched random-clip comparisons over ten fixed seeds, an independently calibrated nearest-clip open-set scorer, calibration-size sensitivity and descriptive timing controls. The original mean-profile results are retained and verified during the comparison. See the v10 evidence deposit for aggregate results and provenance. Software is Apache-2.0; manuscript and original evidence documentation are CC BY-NC 4.0; third-party terms remain separate.",
   "license": "Apache-2.0",
   "version": "0.3.0",
   "keywords": [
@@ -27,7 +27,7 @@
       "scheme": "url"
     },
     {
-      "identifier": "10.5281/zenodo.23167851",
+      "identifier": "10.5281/zenodo.23174588",
       "relation": "isSupplementedBy",
       "scheme": "doi"
     },
